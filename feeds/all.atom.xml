@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-03-22T12:58:00+09:00</updated><entry><title>Mr.Children - ロード・アイ・ミス・ユー</title><link href="https://chinium.github.io/2018/mrchildren-rodoaimisuyu.html" rel="alternate"></link><published>2018-03-22T12:58:00+09:00</published><updated>2018-03-22T12:58:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-rodoaimisuyu.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;p&gt;あの日からずっと気が付いてたんだ&lt;/p&gt;
+&lt;p&gt;今まで何も聞かずにいたけど&lt;/p&gt;
+&lt;p&gt;途切れた受話器ごしの声&lt;/p&gt;
+&lt;p&gt;最後の言葉を探して&lt;/p&gt;
+&lt;p&gt;さよならだね引き止めても&lt;/p&gt;
+&lt;p&gt;君は出ていく&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;/p&gt;
+&lt;p&gt;LordI miss you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;壊れそうなほど切ない想い&lt;/p&gt;
+&lt;p&gt;この胸の Rain dropsまだ降り止まない&lt;/p&gt;
+&lt;p&gt;あの頃のままの笑顔が&lt;/p&gt;
+&lt;p&gt;映画のように溢れてくる&lt;/p&gt;
+&lt;p&gt;何もかもが想い出の中へ&lt;/p&gt;
+&lt;p&gt;消えた今でも&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜にもう二度と戻れない&lt;/p&gt;
+&lt;p&gt;LordI miss you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;微笑みも 優しさも色褪せてにじんでく&lt;/p&gt;
+&lt;p&gt;I want is you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;/p&gt;
+&lt;p&gt;LordI miss you I'm waiting on your love fu…&lt;/p&gt;</content><category term="1992"></category></entry><entry><title>Mr.Children - 君がいた夏</title><link href="https://chinium.github.io/2018/mrchildren-jun-gaitaxia.html" rel="alternate"></link><published>2018-03-22T12:37:00+09:00</published><updated>2018-03-22T12:37:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-jun-gaitaxia.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;夕暮れの海に ほほを染めた君が
+誰よりも 何よりも 一番好きだった
+二人していつも あの海を見てたね
+日に焼けた お互いの肩にもたれたまま
+一日中 笑ってた
+
+キリンぐらい首を 長くしてずっと
+待っていたのが まるで夢のように
+※また夏が終わる もうさよならだね
+時は二人を 引き離して行く
+おもちゃの時計の針を戻しても
+何も変わらない
+Oh I will miss you※
+
+君と出会ってから 何も手につかず
+また夏が終わる もうさよならだね
+時は二人を 引き離して行く
+言葉にできずに そっと離れても
+いつか この胸に
+Oh I will miss you
+
+ひまわりの坂道 駆け降りてく君が
+振り向いた あの空の 眩しさが今でも
+
+(※くり返し)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are two ways to specify the identifier:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are two ways to specify the identifier:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><category term="1992"></category></entry><entry><title>My First Review1</title><link href="https://chinium.github.io/2013/my-first-review1.html" rel="alternate"></link><published>2013-12-03T10:20:00+09:00</published><updated>2013-12-03T10:20:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2013-12-03:/2013/my-first-review1.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content></entry><entry><title>The first article</title><link href="https://chinium.github.io/2012/the-first-article.html" rel="alternate"></link><published>2012-12-01T10:02:00+09:00</published><updated>2012-12-01T10:02:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2012-12-01:/2012/the-first-article.html</id><summary type="html">&lt;p&gt;See below intra-site link examples in reStructuredText format.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the current file&lt;/a&gt;
+&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;See below intra-site link examples in reStructuredText format.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the current file&lt;/a&gt;
+&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><title>The second article</title><link href="https://chinium.github.io/2012/the-second-article.html" rel="alternate"></link><published>2012-12-01T10:02:00+09:00</published><updated>2012-12-01T10:02:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2012-12-01:/2012/the-second-article.html</id><summary type="html">&lt;p&gt;See below intra-site link examples in Markdown format.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the current file&lt;/a&gt;
+&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;See below intra-site link examples in Markdown format.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the current file&lt;/a&gt;
+&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>My First Review</title><link href="https://chinium.github.io/2010/my-first-review.html" rel="alternate"></link><published>2010-12-03T10:20:00+09:00</published><updated>2010-12-03T10:20:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2010-12-03:/2010/my-first-review.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content></entry></feed>
