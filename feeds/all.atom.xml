@@ -1,73 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-03-22T12:58:00+09:00</updated><entry><title>Mr.Children - ロード・アイ・ミス・ユー</title><link href="https://chinium.github.io/2018/mrchildren-rodoaimisuyu.html" rel="alternate"></link><published>2018-03-22T12:58:00+09:00</published><updated>2018-03-22T12:58:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-rodoaimisuyu.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;p&gt;あの日からずっと気が付いてたんだ&lt;/p&gt;
-&lt;p&gt;今まで何も聞かずにいたけど&lt;/p&gt;
-&lt;p&gt;途切れた受話器ごしの声&lt;/p&gt;
-&lt;p&gt;最後の言葉を探して&lt;/p&gt;
-&lt;p&gt;さよならだね引き止めても&lt;/p&gt;
-&lt;p&gt;君は出ていく&lt;/p&gt;
-&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;/p&gt;
-&lt;p&gt;LordI miss you I'm waiting on your love&lt;/p&gt;
-&lt;p&gt;壊れそうなほど切ない想い&lt;/p&gt;
-&lt;p&gt;この胸の Rain dropsまだ降り止まない&lt;/p&gt;
-&lt;p&gt;あの頃のままの笑顔が&lt;/p&gt;
-&lt;p&gt;映画のように溢れてくる&lt;/p&gt;
-&lt;p&gt;何もかもが想い出の中へ&lt;/p&gt;
-&lt;p&gt;消えた今でも&lt;/p&gt;
-&lt;p&gt;抱きしめた あの夜にもう二度と戻れない&lt;/p&gt;
-&lt;p&gt;LordI miss you I'm waiting on your love&lt;/p&gt;
-&lt;p&gt;微笑みも 優しさも色褪せてにじんでく&lt;/p&gt;
-&lt;p&gt;I want is you I'm waiting on your love&lt;/p&gt;
-&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;/p&gt;
-&lt;p&gt;LordI miss you I'm waiting on your love fu…&lt;/p&gt;</content><category term="1992"></category></entry><entry><title>Mr.Children - 君がいた夏</title><link href="https://chinium.github.io/2018/mrchildren-jun-gaitaxia.html" rel="alternate"></link><published>2018-03-22T12:37:00+09:00</published><updated>2018-03-22T12:37:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-jun-gaitaxia.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;夕暮れの海に ほほを染めた君が
-誰よりも 何よりも 一番好きだった
-二人していつも あの海を見てたね
-日に焼けた お互いの肩にもたれたまま
-一日中 笑ってた
-
-キリンぐらい首を 長くしてずっと
-待っていたのが まるで夢のように
-※また夏が終わる もうさよならだね
-時は二人を 引き離して行く
-おもちゃの時計の針を戻しても
-何も変わらない
-Oh I will miss you※
-
-君と出会ってから 何も手につかず
-また夏が終わる もうさよならだね
-時は二人を 引き離して行く
-言葉にできずに そっと離れても
-いつか この胸に
-Oh I will miss you
-
-ひまわりの坂道 駆け降りてく君が
-振り向いた あの空の 眩しさが今でも
-
-(※くり返し)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;There are two ways to specify the identifier:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;There are two ways to specify the identifier:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><category term="1992"></category></entry><entry><title>My First Review1</title><link href="https://chinium.github.io/2013/my-first-review1.html" rel="alternate"></link><published>2013-12-03T10:20:00+09:00</published><updated>2013-12-03T10:20:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2013-12-03:/2013/my-first-review1.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content></entry><entry><title>The first article</title><link href="https://chinium.github.io/2012/the-first-article.html" rel="alternate"></link><published>2012-12-01T10:02:00+09:00</published><updated>2012-12-01T10:02:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2012-12-01:/2012/the-first-article.html</id><summary type="html">&lt;p&gt;See below intra-site link examples in reStructuredText format.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the current file&lt;/a&gt;
-&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;See below intra-site link examples in reStructuredText format.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the current file&lt;/a&gt;
-&lt;a class="reference external" href="https://chinium.github.io/2012/the-second-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;
-</content></entry><entry><title>The second article</title><link href="https://chinium.github.io/2012/the-second-article.html" rel="alternate"></link><published>2012-12-01T10:02:00+09:00</published><updated>2012-12-01T10:02:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2012-12-01:/2012/the-second-article.html</id><summary type="html">&lt;p&gt;See below intra-site link examples in Markdown format.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the current file&lt;/a&gt;
-&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;See below intra-site link examples in Markdown format.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the current file&lt;/a&gt;
-&lt;a href="https://chinium.github.io/2012/the-first-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>My First Review</title><link href="https://chinium.github.io/2010/my-first-review.html" rel="alternate"></link><published>2010-12-03T10:20:00+09:00</published><updated>2010-12-03T10:20:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2010-12-03:/2010/my-first-review.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-03-26T12:56:00+09:00</updated><entry><title>Mr.Children - CHILDREN'S WORLD</title><link href="https://chinium.github.io/2018/mrchildren-childrens-world.html" rel="alternate"></link><published>2018-03-26T12:56:00+09:00</published><updated>2018-03-26T12:56:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-26:/2018/mrchildren-childrens-world.html</id><summary type="html"></summary><content type="html">&lt;p&gt;*&lt;br&gt;
+壊れた窓の隙間から&lt;br&gt;
+僕を呼ぶ口笛が聞こえる&lt;br&gt;
+空き地の隅に組み立てた&lt;br&gt;
+秘密の基地へ走って行く&lt;br&gt;
+ママの口癖も 聞こえないふりで&lt;br&gt;
+仲間を集めて 始めよう  &lt;/p&gt;
+&lt;p&gt;あいつは口が軽いから&lt;br&gt;
+仲間には入れたくないけれど&lt;br&gt;
+ギター弾くのが上手いんだ&lt;br&gt;
+それはまるで チャック・ベリーのように&lt;br&gt;
+トランプが化けた メンバーズ・カード&lt;br&gt;
+こっそり計画を立てて  &lt;/p&gt;
+&lt;p&gt;何か大きな事を しでかしたくて&lt;br&gt;
+ウズウズしている&lt;br&gt;
+いつも 大人の声に 聞き耳立てて&lt;br&gt;
+ビクビクしている&lt;br&gt;
+そんな CHILDREN'S WORLD  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+間違いだらけの答案は&lt;br&gt;
+空き地に埋めて隠したけど&lt;br&gt;
+心の隅に隠してる&lt;br&gt;
+重い荷物は消せないから&lt;br&gt;
+あの頃のように 笑えない時が&lt;br&gt;
+いつか来るけれど 心の中は  &lt;/p&gt;
+&lt;p&gt;数えきれない夢を抱えて&lt;br&gt;
+ドキドキしている&lt;br&gt;
+今は思い通りにいかないことも&lt;br&gt;
+いつかは叶えて&lt;br&gt;
+ここは CHILDREN'S WORLD  &lt;/p&gt;
+&lt;p&gt;Woo… CHILDREN'S WORLD……  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - 友達のままで</title><link href="https://chinium.github.io/2018/mrchildren-you-da-nomamade.html" rel="alternate"></link><published>2018-03-26T12:52:00+09:00</published><updated>2018-03-26T12:52:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-26:/2018/mrchildren-you-da-nomamade.html</id><summary type="html"></summary><content type="html">&lt;p&gt;*&lt;br&gt;
+ハンドルを握って 見た事もない場所まで&lt;br&gt;
+できるだけ頭を空っぽにして走った&lt;br&gt;
+あの娘の事思い出さないように&lt;br&gt;
+カーラジオつけて飛ばして  &lt;/p&gt;
+&lt;p&gt;友達のままじゃいたくないと&lt;br&gt;
+きりだした僕を見て&lt;br&gt;
+もうこのままじゃいられないと&lt;br&gt;
+君は 急に泣き出した&lt;br&gt;
+Nononono  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+外は晴れてるのに 標識はぼやけたまま&lt;br&gt;
+ワイパーをつけてもこの涙は飛ばされない&lt;br&gt;
+いつの間にか立てられていたルールを&lt;br&gt;
+壊したのは君の方なのに  &lt;/p&gt;
+&lt;p&gt;ふざけてばかりで本当の事&lt;br&gt;
+隠しては来たけど&lt;br&gt;
+知ってたはずだろう&lt;br&gt;
+僕が君をいつもずっと見てた事  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - ためいきの日曜日</title><link href="https://chinium.github.io/2018/mrchildren-tameikinori-yao-ri.html" rel="alternate"></link><published>2018-03-26T12:47:00+09:00</published><updated>2018-03-26T12:47:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-26:/2018/mrchildren-tameikinori-yao-ri.html</id><summary type="html"></summary><content type="html">&lt;p&gt;*&lt;br&gt;
+Oh my Darin' 白い雲を 窓から眺めるたび&lt;br&gt;
+遥か遠く 逢えぬ君へ 想いつのる  &lt;/p&gt;
+&lt;p&gt;ためいきの日曜日 黄昏時の風に&lt;br&gt;
+身を任せて 飛んで行きたいよ&lt;br&gt;
+電話じゃ上手く 伝えられないから  &lt;/p&gt;
+&lt;p&gt;Sunday oh Sunday 行き交う恋人達の&lt;br&gt;
+笑い声に君が重なる  &lt;/p&gt;
+&lt;p&gt;I'm dreaming of see you again 夢の中で逢おう&lt;br&gt;
+いつの日かきっと 君の願いが叶う その日まで  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+Oh my Baby 別々の場所で暮らす二人の&lt;br&gt;
+距離が心のその中まで 変えないように  &lt;/p&gt;
+&lt;p&gt;あの日から今日まで 積み上げてた時が&lt;br&gt;
+今にも崩れてしまいそうな 悪い夢を&lt;br&gt;
+一日中見てた  &lt;/p&gt;
+&lt;p&gt;Sunday oh Sunday 思ってたよりもずっと&lt;br&gt;
+君の存在は大きくなってた  &lt;/p&gt;
+&lt;p&gt;I'm dreaming of see you again 夢の中で逢おう&lt;br&gt;
+口癖のように 君の名を呼んでも No  &lt;/p&gt;
+&lt;p&gt;退屈なTVショー おしゃべりなラジオ&lt;br&gt;
+飲みかけのソーダ 星の降るハイウェイ&lt;br&gt;
+何もかもが 全て僕を狂わせて行く&lt;br&gt;
+I'm so blue  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - 風～The wind knows how I feel～</title><link href="https://chinium.github.io/2018/mrchildren-feng-the-wind-knows-how-i-feel.html" rel="alternate"></link><published>2018-03-26T12:43:00+09:00</published><updated>2018-03-26T12:43:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-26:/2018/mrchildren-feng-the-wind-knows-how-i-feel.html</id><summary type="html"></summary><content type="html">&lt;p&gt;*&lt;br&gt;
+ビルの谷間 走り抜けて&lt;br&gt;
+風は空に 舞い上がる&lt;br&gt;
+君は何を 見てきたの&lt;br&gt;
+その透き通る体で  &lt;/p&gt;
+&lt;p&gt;アスファルトに 引きずられて&lt;br&gt;
+重いバックを 手に持って&lt;br&gt;
+汗だくのシャツ 丸めたハンカチ&lt;br&gt;
+そんな人に君はそよ風を  &lt;/p&gt;
+&lt;p&gt;The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+風は知ってるんだ 本当の事&lt;br&gt;
+The wind knows how I feel  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+荒野を抜けて 大地を蹴って&lt;br&gt;
+僕の心を吹き抜ける&lt;br&gt;
+時には強く 時に優しく&lt;br&gt;
+僕の心を吹き抜ける  &lt;/p&gt;
+&lt;p&gt;いつかは僕も 君のような&lt;br&gt;
+優しい風になれるかな&lt;br&gt;
+冬になったら 枯れ葉を食べて&lt;br&gt;
+大きな風になれるかな  &lt;/p&gt;
+&lt;p&gt;The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+風は知ってるんだ 本当の事&lt;br&gt;
+The wind knows how I feel  &lt;/p&gt;
+&lt;p&gt;The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+The wind knows how I feel&lt;br&gt;
+(The wind knows how I feel)&lt;br&gt;
+風は知ってるんだ 本当の事  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - Mr.Shining Moon</title><link href="https://chinium.github.io/2018/mrchildren-mrshining-moon.html" rel="alternate"></link><published>2018-03-26T09:07:00+09:00</published><updated>2018-03-26T09:07:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-26:/2018/mrchildren-mrshining-moon.html</id><summary type="html">&lt;p&gt;Mr.Shining Moon&lt;/p&gt;</summary><content type="html">&lt;p&gt;*&lt;br&gt;
+泣き出した空は 路上に落ちて&lt;br&gt;
+水たまり 月と話してる&lt;br&gt;
+綺麗だね また少しあの娘を好きになっていく&lt;br&gt;
+ありがとう Mr. Shining Moon  &lt;/p&gt;
+&lt;p&gt;眠らずに作った歌を ほら&lt;br&gt;
+鼻唄で歌うよ 知らんぷりで&lt;br&gt;
+届くかな この気持ち 笑った時の君が&lt;br&gt;
+誰より好きだよ Woo  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+あの雲に乗って 旅に出かけよう&lt;br&gt;
+真夜中にそっと 君の手をとって&lt;br&gt;
+今すぐ さらいに行くよ&lt;br&gt;
+Woo… Woo…&lt;br&gt;
+一人きり 君に逢えない夜は&lt;br&gt;
+月影の ソファーに腰掛けて&lt;br&gt;
+夢見せて また君の香りで目が覚める朝を&lt;br&gt;
+ありがとう Mr. Shining Moon  &lt;/p&gt;
+&lt;p&gt;僕だけにそっと 聞かせてくれた&lt;br&gt;
+赤くなりそうな 秘密の話&lt;br&gt;
+誰にも 教えないから  &lt;/p&gt;
+&lt;p&gt;泣き出した空は 路上に溶けて&lt;br&gt;
+水たまり 月に片想いしてるよ&lt;br&gt;
+いつまでも このままでいたいけど ほら時間だよ&lt;br&gt;
+おやすみ Good night またいつか&lt;br&gt;
+Woo… Woo… Woo…  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - ロード・アイ・ミス・ユー</title><link href="https://chinium.github.io/2018/mrchildren-rodoaimisuyu.html" rel="alternate"></link><published>2018-03-22T12:58:00+09:00</published><updated>2018-03-22T12:58:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-rodoaimisuyu.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;p&gt;*&lt;br&gt;
+あの日からずっと気が付いてたんだ&lt;br&gt;
+今まで何も聞かずにいたけど&lt;/p&gt;
+&lt;p&gt;途切れた受話器ごしの声&lt;br&gt;
+最後の言葉を探して&lt;br&gt;
+さよならだね引き止めても&lt;br&gt;
+君は出ていく&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;br&gt;
+LordI miss you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+壊れそうなほど切ない想い&lt;br&gt;
+この胸の Rain dropsまだ降り止まない&lt;/p&gt;
+&lt;p&gt;あの頃のままの笑顔が&lt;br&gt;
+映画のように溢れてくる&lt;br&gt;
+何もかもが想い出の中へ&lt;br&gt;
+消えた今でも&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜にもう二度と戻れない&lt;br&gt;
+LordI miss you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;微笑みも 優しさも色褪せてにじんでく&lt;br&gt;
+I want is you I'm waiting on your love&lt;/p&gt;
+&lt;p&gt;抱きしめた あの夜はもう二度と戻らない&lt;br&gt;
+LordI miss you I'm waiting on your love&lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>Mr.Children - 君がいた夏</title><link href="https://chinium.github.io/2018/mrchildren-jun-gaitaxia.html" rel="alternate"></link><published>2018-03-22T12:37:00+09:00</published><updated>2018-03-22T12:37:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-22:/2018/mrchildren-jun-gaitaxia.html</id><summary type="html">&lt;p&gt;君がいた夏&lt;/p&gt;</summary><content type="html">&lt;p&gt;*&lt;br&gt;
+夕暮れの海に ほほを染めた君が&lt;br&gt;
+誰よりも 何よりも 一番好きだった&lt;br&gt;
+二人していつも あの海を見てたね&lt;br&gt;
+日に焼けた お互いの肩にもたれたまま&lt;br&gt;
+一日中 笑ってた  &lt;/p&gt;
+&lt;p&gt;キリンぐらい首を 長くしてずっと&lt;br&gt;
+待っていたのが まるで夢のように&lt;br&gt;
+※また夏が終わる もうさよならだね&lt;br&gt;
+時は二人を 引き離して行く&lt;br&gt;
+おもちゃの時計の針を戻しても&lt;br&gt;
+何も変わらない&lt;br&gt;
+Oh I will miss you  &lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+君と出会ってから 何も手につかず&lt;br&gt;
+また夏が終わる もうさよならだね&lt;br&gt;
+時は二人を 引き離して行く&lt;br&gt;
+言葉にできずに そっと離れても&lt;br&gt;
+いつか この胸に&lt;br&gt;
+Oh I will miss you  &lt;/p&gt;
+&lt;p&gt;ひまわりの坂道 駆け降りてく君が&lt;br&gt;
+振り向いた あの空の 眩しさが今でも  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="1992"></category><category term="Everything"></category></entry><entry><title>My First Review</title><link href="https://chinium.github.io/2018/my-first-review.html" rel="alternate"></link><published>2018-03-03T10:20:00+09:00</published><updated>2018-03-03T10:20:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-03-03:/2018/my-first-review.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content></entry></feed>
