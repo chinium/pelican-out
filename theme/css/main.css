@@ -45,6 +45,11 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 .article-meta span { display:block; clear:left; }
 #article-list {
 	border-top: 1px #EAEAEA solid!important;
+	padding-bottom: 10px;
+}
+#article-list .article-meta {
+	padding-bottom: 0!important;
+	border-bottom: 0!important;
 }
 .thumbnail { margin:0px; padding:0px; }
 .thumbnail img { float:right; }
