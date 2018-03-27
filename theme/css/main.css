@@ -116,3 +116,20 @@ input#s { width:70%; height:auto; margin:5px 0px; }
     top: 8px;
     line-height: 28px;
 }
+
+.summary {
+	border-top: 1px dotted #9A9A9A;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	padding-top: 10px;
+}
+.entry > div.summary:last-of-type {
+	border-bottom: 1px dotted #9A9A9A;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+}
+
+.paginator {
+	font-size: 1.1em;
+	font-weight: bold;
+}
