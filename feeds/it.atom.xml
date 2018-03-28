@@ -1,26 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/ - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2014-09-30T10:00:00+09:00</updated><entry><title>VBScript - Check &amp; Add UserAccount on Windows</title><link href="https://chinium.github.io/2014/vbscript-check-add-useraccount-on-windows.html" rel="alternate"></link><published>2014-09-30T10:00:00+09:00</published><updated>2014-09-30T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-09-30:/2014/vbscript-check-add-useraccount-on-windows.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;Using WMI Service&lt;/h3&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;GetObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"winmgmts:\\ ...&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="s"&gt;- Win32_UserAccount WMI Class&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="s"&gt;   http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Using ADSI (Active Directory Service Interfaces)&lt;/h3&gt;
-&lt;p&gt;http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx&lt;/p&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;' specify your new user account info&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;Const&lt;/span&gt; &lt;span class="n"&gt;USERACCOUNT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"newuser1"&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;Const&lt;/span&gt; &lt;span class="n"&gt;USERACCOUNT_PW&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"newpasswd!"&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;Const&lt;/span&gt; &lt;span class="n"&gt;ADS_UF_DONT_EXPIRE_PASSWD …&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;Using WMI Service&lt;/h3&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;GetObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"winmgmts:\\ ...&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="s"&gt;- Win32_UserAccount WMI Class&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="s"&gt;   http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Using ADSI (Active Directory Service Interfaces)&lt;/h3&gt;
-&lt;p&gt;http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/ - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2015-07-22T10:00:00+09:00</updated><entry><title>Redis 3.0.3 has released on 17 Jul 2015.</title><link href="https://chinium.github.io/2015/redis-303-has-released-on-17-jul-2015.html" rel="alternate"></link><published>2015-07-22T10:00:00+09:00</published><updated>2015-07-22T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2015-07-22:/2015/redis-303-has-released-on-17-jul-2015.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;Redis 3.0.3 is out with a few interesting changes.  &lt;/p&gt;
+&lt;p&gt;Full changelog:   &lt;/p&gt;
+&lt;p&gt;--[ Redis 3.0.3 ] Release date: 17 …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;Redis 3.0.3 is out with a few interesting changes.  &lt;/p&gt;
+&lt;p&gt;Full changelog:   &lt;/p&gt;
+&lt;p&gt;--[ Redis 3.0.3 ] Release date: 17 Jul 2015   &lt;/p&gt;
+&lt;p&gt;Upgrade urgency: LOW for Redis and Sentinel.   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[FIX] Fix blocking operations timeout precision when HZ is at its default 
+        value (not increased) and there are thousands of clients connected 
+        at the same time. This bug affected Sidekiq users that experienced 
+        a very long delay for BLPOP and similar commands to return for 
+        timeout. Check commit b029ff1 for more info. (Salvatore Sanfilippo) &lt;/li&gt;
+&lt;li&gt;[FIX] MIGRATE "creating socket: Invalid argument" error fix. Check 
+        issues #2609 and #2612 for more info. (Salvatore Sanfilippo) &lt;/li&gt;
+&lt;li&gt;[FIX] Be able to connect to the master even when the slave is bound to 
+        just the loopback interface and has no valid public address in the 
+        network the master is reacahble. (Salvatore Sanfilippo) &lt;/li&gt;
+&lt;li&gt;[FIX] ZADD with options encoding promotion fixed. (linfangrong) &lt;/li&gt;
+&lt;li&gt;[FIX] Reset aof_delayed_fsync on CONFIG RESETSTATS. (Tom Kiemes) &lt;/li&gt;
+&lt;li&gt;[FIX] PFCOUNT key parsing in cluster fixed. (MOON_CLJ) &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[FIX] Fix Solaris compilation of Redis 3.0. (Jan-Erik Rediger)   &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[NEW] Variadic EXISTS command. Now the command accepts multiple arguments&lt;br/&gt;
+        and returns the total count of existing keys.   &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://groups.google.com/forum/#!msg/redis-db/DVvsez9btzg/ryA1JWTpucgJ" target="_blank"&gt;https://groups.google.com/forum/#!msg/redis-db/DVvsez9btzg/ryA1JWTpucgJ&lt;/a&gt;&lt;/p&gt;</content><category term="Redis"></category></entry><entry><title>VBScript - Check &amp; Add UserAccount on Windows</title><link href="https://chinium.github.io/2014/vbscript-check-add-useraccount-on-windows.html" rel="alternate"></link><published>2014-09-30T10:00:00+09:00</published><updated>2014-09-30T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-09-30:/2014/vbscript-check-add-useraccount-on-windows.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="using-wmi-service"&gt;Using WMI Service&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GetObject("winmgmts:\ ...&lt;/li&gt;
+&lt;li&gt;Win32_UserAccount WMI Class&lt;br/&gt;
+&lt;a href="http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx" target="_blank"&gt;http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="using-adsi-active-directory-service-interfaces"&gt;Using …&lt;/h3&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="using-wmi-service"&gt;Using WMI Service&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GetObject("winmgmts:\ ...&lt;/li&gt;
+&lt;li&gt;Win32_UserAccount WMI Class&lt;br/&gt;
+&lt;a href="http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx" target="_blank"&gt;http://msdn.microsoft.com/en-us/library/aa394507(v=vs.85).aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="using-adsi-active-directory-service-interfaces"&gt;Using ADSI (Active Directory Service Interfaces)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx" target="_blank"&gt;http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;' specify your new user account info&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="k"&gt;Const&lt;/span&gt; &lt;span class="n"&gt;USERACCOUNT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"newuser1"&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="k"&gt;Const&lt;/span&gt; &lt;span class="n"&gt;USERACCOUNT_PW&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"newpasswd!"&lt;/span&gt;&lt;/span&gt;
@@ -157,7 +179,11 @@
 &lt;span class="code-line"&gt;    &lt;span class="n"&gt;wscript&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeline&lt;/span&gt; &lt;span class="n"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Number&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s"&gt;" Src: "&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Source&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s"&gt;" Desc: "&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;  &lt;span class="n"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Description&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;    &lt;span class="n"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Clear&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="k"&gt;End&lt;/span&gt; &lt;span class="k"&gt;Sub&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="VBScript"></category></entry><entry><title>Python - daemonize package</title><link href="https://chinium.github.io/2014/python-daemonize-package.html" rel="alternate"></link><published>2014-09-02T10:00:00+09:00</published><updated>2014-09-02T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-09-02:/2014/python-daemonize-package.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="VBScript"></category></entry><entry><title>Python - daemonize package</title><link href="https://chinium.github.io/2014/python-daemonize-package.html" rel="alternate"></link><published>2014-09-02T10:00:00+09:00</published><updated>2014-09-02T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-09-02:/2014/python-daemonize-package.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="installation"&gt;Installation&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost python&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# pip install daemonize&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;'&lt;/span&gt;Downloading/unpacking daemonize&lt;/span&gt;
+&lt;span class="code-line"&gt;  Downloading daemonize-2.3.1.tar.gz&lt;/span&gt;
+&lt;span class="code-line"&gt;  Running setup.py …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="installation"&gt;Installation&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost python&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# pip install daemonize&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="err"&gt;'&lt;/span&gt;Downloading/unpacking daemonize&lt;/span&gt;
 &lt;span class="code-line"&gt;  Downloading daemonize-2.3.1.tar.gz&lt;/span&gt;
@@ -171,23 +197,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Help&lt;/h3&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;Python &lt;span class="m"&gt;2&lt;/span&gt;.7.2 &lt;span class="o"&gt;(&lt;/span&gt;default …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;Installation&lt;/h3&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost python&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# pip install daemonize&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="err"&gt;'&lt;/span&gt;Downloading/unpacking daemonize&lt;/span&gt;
-&lt;span class="code-line"&gt;  Downloading daemonize-2.3.1.tar.gz&lt;/span&gt;
-&lt;span class="code-line"&gt;  Running setup.py egg_info &lt;span class="k"&gt;for&lt;/span&gt; package daemonize&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;Installing collected packages: daemonize&lt;/span&gt;
-&lt;span class="code-line"&gt;  Running setup.py install &lt;span class="k"&gt;for&lt;/span&gt; daemonize&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;Successfully installed daemonize&lt;/span&gt;
-&lt;span class="code-line"&gt;Cleaning up...&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Help&lt;/h3&gt;
+&lt;h3 id="help"&gt;Help&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;Python &lt;span class="m"&gt;2&lt;/span&gt;.7.2 &lt;span class="o"&gt;(&lt;/span&gt;default, Jul  &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;2011&lt;/span&gt;, &lt;span class="m"&gt;21&lt;/span&gt;:32:15&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="o"&gt;[&lt;/span&gt;GCC &lt;span class="m"&gt;4&lt;/span&gt;.1.2 &lt;span class="m"&gt;20080704&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;Red Hat &lt;span class="m"&gt;4&lt;/span&gt;.1.2-48&lt;span class="o"&gt;)]&lt;/span&gt; on linux2&lt;/span&gt;
@@ -225,7 +235,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Example&lt;/h3&gt;
+&lt;h3 id="example"&gt;Example&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# daemonize_ex1.py&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;import &lt;span class="nb"&gt;time&lt;/span&gt;&lt;/span&gt;
@@ -256,7 +266,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Run&lt;/h3&gt;
+&lt;h3 id="run"&gt;Run&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# python daemonize_ex1.py&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ps -ef | grep daemonize&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;root     &lt;span class="m"&gt;18370&lt;/span&gt;     &lt;span class="m"&gt;1&lt;/span&gt;  &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;23&lt;/span&gt;:56 ?        &lt;span class="m"&gt;00&lt;/span&gt;:00:00 python daemonize_ex1.py&lt;/span&gt;
@@ -271,13 +281,41 @@
 &lt;span class="code-line"&gt;&lt;span class="m"&gt;18370&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# kill -TERM `cat test.pid`&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="o"&gt;(&lt;/span&gt;dev&lt;span class="o"&gt;)[&lt;/span&gt;root@localhost daemonize&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ps -ef | grep daemonize&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;root     &lt;span class="m"&gt;18427&lt;/span&gt; &lt;span class="m"&gt;14147&lt;/span&gt;  &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;23&lt;/span&gt;:57 pts/0    &lt;span class="m"&gt;00&lt;/span&gt;:00:00 grep daemonize&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Python / Raw Socket Programming #1</title><link href="https://chinium.github.io/2014/python-raw-socket-programming-1.html" rel="alternate"></link><published>2014-08-25T10:00:00+09:00</published><updated>2014-08-25T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-08-25:/2014/python-raw-socket-programming-1.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;IP Header (RFC 791)&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Javascript - jQuery Sparklines</title><link href="https://chinium.github.io/2014/javascript-jquery-sparklines.html" rel="alternate"></link><published>2014-08-28T10:00:00+09:00</published><updated>2014-08-28T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-08-28:/2014/javascript-jquery-sparklines.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;sparkline이란 일반적으로 축(axes)이나 좌표(coordinates) 없이 그려진 작은 라인 차트를 의미한다.  &lt;/p&gt;
+&lt;p&gt;온도나 주가와 같이 시간에 따라 변화하는 형태를 …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;sparkline이란 일반적으로 축(axes)이나 좌표(coordinates) 없이 그려진 작은 라인 차트를 의미한다.  &lt;/p&gt;
+&lt;p&gt;온도나 주가와 같이 시간에 따라 변화하는 형태를 간단하면서 함축적으로 나타낼 수 있어&lt;br/&gt;
+문장 중간이나 여러 차트를 그룹지어서 표시할 때 유용하다.  &lt;/p&gt;
+&lt;h3 id="sample-image"&gt;Sample Image&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Sparkline Image" src="https://chinium.github.io/media/img/sparkline.png"/&gt;&lt;/p&gt;
+&lt;h3 id="url"&gt;URL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;jQuery Sparklines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://omnipotent.net/jquery.sparkline" target="_blank"&gt;http://omnipotent.net/jquery.sparkline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Highcharts sparkline&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.highcharts.com/demo/sparkline" target="_blank"&gt;http://www.highcharts.com/demo/sparkline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;amcharts : Micro Charts &amp;amp; Sparklines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amcharts.com/demos/micro-charts-sparklines/" target="_blank"&gt;http://www.amcharts.com/demos/micro-charts-sparklines/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Charts : Sparklines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://developers.google.com/chart/interactive/docs/gallery/imagesparkline" target="_blank"&gt;https://developers.google.com/chart/interactive/docs/gallery/imagesparkline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Javascript"></category><category term="Chart"></category></entry><entry><title>Python - Raw Socket Programming #1</title><link href="https://chinium.github.io/2014/python-raw-socket-programming-1.html" rel="alternate"></link><published>2014-08-25T10:00:00+09:00</published><updated>2014-08-25T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2014-08-25:/2014/python-raw-socket-programming-1.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ip-header-rfc-791"&gt;IP Header (RFC 791)&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;0                   1                   2                   3   &lt;/span&gt;
-&lt;span class="code-line"&gt;0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 &lt;/span&gt;
-&lt;span class="code-line"&gt;+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+&lt;/span&gt;
-&lt;span class="code-line"&gt;|Version|  IHL  |Type of Service|          Total Length         |&lt;/span&gt;
-&lt;span class="code-line"&gt;+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+&lt;/span&gt;
-&lt;span class="code-line"&gt;|         Identification        |Flags|      Fragment …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3&gt;IP Header (RFC 791)&lt;/h3&gt;
+&lt;span class="code-line"&gt;0 1 2 3 4 5 6 7 8 9 0 1 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ip-header-rfc-791"&gt;IP Header (RFC 791)&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;0                   1                   2                   3   &lt;/span&gt;
 &lt;span class="code-line"&gt;0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 &lt;/span&gt;
 &lt;span class="code-line"&gt;+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+&lt;/span&gt;
@@ -296,7 +334,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;TCP Header (RFC 793)&lt;/h3&gt;
+&lt;h3 id="tcp-header-rfc-793"&gt;TCP Header (RFC 793)&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;0                   1                   2                   3   &lt;/span&gt;
 &lt;span class="code-line"&gt;0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 &lt;/span&gt;
 &lt;span class="code-line"&gt;+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+&lt;/span&gt;
@@ -319,7 +357,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;UDP Header (RFC 768)&lt;/h3&gt;
+&lt;h3 id="udp-header-rfc-768"&gt;UDP Header (RFC 768)&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;0      7 8     15 16    23 24    31  &lt;/span&gt;
 &lt;span class="code-line"&gt;+--------+--------+--------+--------+ &lt;/span&gt;
 &lt;span class="code-line"&gt;|     Source      |   Destination   | &lt;/span&gt;
@@ -334,7 +372,7 @@
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Packet Sniffer Using Raw Socket&lt;/h3&gt;
+&lt;h3 id="packet-sniffer-using-raw-socket"&gt;Packet Sniffer Using Raw Socket&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# raw_socket.py&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;socket&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;/span&gt;

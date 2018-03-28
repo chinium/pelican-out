@@ -180,3 +180,12 @@ code {
     color: grey;
     text-align: right;
 }
+
+.toc {
+    margin-bottom: 40px;
+}
+
+.readmore {
+    margin-top: -5px;
+    float: right;
+}
