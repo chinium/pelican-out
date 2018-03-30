@@ -16,7 +16,7 @@
 &lt;p&gt;아스키는 7비트 인코딩으로, 33개의 출력 불가능한 제어 문자들과 공백을 비롯한 95개의 출력 가능한 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ascii-american-standard-code-for-information-interchange"&gt;ASCII (American Standard Code for Information Interchange)&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아스키는 7비트 인코딩으로, 33개의 출력 불가능한 제어 문자들과 공백을 비롯한 95개의 출력 가능한 문자들로 이루어진다. 제어 문자들은 역사적인 이유로 남아 있으며 대부분은 더 이상 사용되지 않는다. 출력 가능한 문자들은 52개의 영문 알파벳 대소문자와, 10개의 숫자, 32개의 특수 문자, 그리고 하나의 공백 문자로 이루어진다.&lt;br/&gt;
--- from https://ko.wikipedia.org/wiki/ASCII&lt;/p&gt;
+-- from &lt;a href="https://ko.wikipedia.org/wiki/ASCII" target="_blank"&gt;https://ko.wikipedia.org/wiki/ASCII&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight code"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;ASCII Table&lt;/span&gt;
 &lt;span class="code-line"&gt;Decimal  Octal  Hex   Binary      Value&lt;/span&gt;

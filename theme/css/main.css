@@ -30,6 +30,7 @@ input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
 #sidebar > li { margin:20px 0px; }
 #sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 45px; }
 #sidebar .description { display:block; width:100%; height:auto; margin:0px 0px 10px 0px; }
+#sidebar aside ul { padding-left: 10px; }
 
 ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 
