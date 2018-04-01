@@ -43,7 +43,9 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 	padding-bottom: 10px!important;
 	border-bottom: 1px #EAEAEA solid!important;
 }
+.article-meta time { float:left; }
 .article-meta span { display:block; clear:left; }
+.article-meta span.meta-comment { clear:none; }
 #article-list {
 	border-top: 1px #EAEAEA solid!important;
 	padding-bottom: 10px;
