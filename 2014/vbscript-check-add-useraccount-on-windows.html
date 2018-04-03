@@ -47,147 +47,293 @@
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx" target="_blank">http://msdn.microsoft.com/en-us/library/aa746512(v=vs.85).aspx</a></li>
 </ul>
-<div class="hilitewrapper"><div class="highlight code"><pre><span class="code-line"><span></span><span class="c">' specify your new user account info</span></span>
-<span class="code-line"><span class="k">Const</span> <span class="n">USERACCOUNT_ID</span> <span class="o">=</span> <span class="s">"newuser1"</span></span>
-<span class="code-line"><span class="k">Const</span> <span class="n">USERACCOUNT_PW</span> <span class="o">=</span> <span class="s">"newpasswd!"</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Const</span> <span class="n">ADS_UF_DONT_EXPIRE_PASSWD</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">H10000</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Dim</span> <span class="n">gStrMsg</span></span>
-<span class="code-line"><span class="k">Dim</span> <span class="n">gStrComputerName</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Call</span> <span class="n">Main</span><span class="p">()</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Function</span> <span class="nf">Main</span><span class="p">()</span></span>
-<span class="code-line">    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">Set</span> <span class="n">wshNetwork</span> <span class="o">=</span> <span class="n">WScript</span><span class="p">.</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">"WScript.Network"</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">gStrComputerName</span> <span class="o">=</span> <span class="n">wshNetwork</span><span class="p">.</span><span class="n">ComputerName</span></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"Computer Name: "</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">nRet</span> <span class="o">=</span> <span class="n">Check_UserAccount</span><span class="p">()</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">nRet</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : nRet "</span> <span class="o">&amp;</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="n">wscript</span><span class="p">.</span><span class="n">quit</span></span>
-<span class="code-line">    <span class="k">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">nRet</span> <span class="o">=</span> <span class="n">Add_UserAccount</span><span class="p">()</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">nRet</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : nRet "</span> <span class="o">&amp;</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="n">wscript</span><span class="p">.</span><span class="n">quit</span></span>
-<span class="code-line">    <span class="k">End</span> <span class="k">If</span></span>
-<span class="code-line"><span class="k">End</span> <span class="k">Function</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c">'</span></span>
-<span class="code-line"><span class="c">' Check if user account already exists or not</span></span>
-<span class="code-line"><span class="c">'</span></span>
-<span class="code-line"><span class="k">Function</span> <span class="nf">Check_UserAccount</span><span class="p">()</span></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : Start"</span></span>
-<span class="code-line">    <span class="n">nRet</span> <span class="o">=</span> <span class="mi">0</span></span>
-<span class="code-line">    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">Set</span> <span class="n">objWMIService</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"winmgmts:\\"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">"\root\cimv2"</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">Set</span> <span class="n">colAccounts</span> <span class="o">=</span> <span class="n">objWMIService</span><span class="p">.</span><span class="n">ExecQuery</span><span class="p">(</span><span class="s">"SELECT * FROM Win32_UserAccount WHERE LocalAccount = 'True' AND Name = '"</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span> <span class="s">"'"</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="k">If</span> <span class="n">colAccounts</span><span class="p">.</span><span class="n">Count</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">            <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span><span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span><span class="s">") does not exists"</span></span>
-<span class="code-line">        <span class="k">Else</span></span>
-<span class="code-line">            <span class="n">nRet</span> <span class="o">=</span> <span class="mi">100</span></span>
-<span class="code-line">            <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span><span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span><span class="s">") already exists"</span></span>
-<span class="code-line">        <span class="k">End</span> <span class="k">If</span></span>
-<span class="code-line">    <span class="k">Else</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when executing wmi query"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">999</span></span>
-<span class="code-line">    <span class="k">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">Check_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : End"</span></span>
-<span class="code-line"><span class="k">End</span> <span class="k">Function</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c">'</span></span>
-<span class="code-line"><span class="c">' Add New UserAccount to Administrators Group</span></span>
-<span class="code-line"><span class="c">'</span></span>
-<span class="code-line"><span class="k">Function</span> <span class="nf">Add_UserAccount</span><span class="p">()</span></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : Start"</span></span>
-<span class="code-line">    <span class="n">nRet</span> <span class="o">=</span> <span class="mi">0</span></span>
-<span class="code-line">    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">set</span> <span class="n">objSystem</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"WinNT://"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">""</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when getting domain object : step 1"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span></span>
-<span class="code-line">        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="k">Exit</span> <span class="k">Function</span></span>
-<span class="code-line">    <span class="nf">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">set</span> <span class="n">objUser</span> <span class="o">=</span> <span class="n">objSystem</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="s">"user"</span><span class="p">,</span> <span class="n">USERACCOUNT_ID</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when creating useraccount : step 2"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span></span>
-<span class="code-line">        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="k">Exit</span> <span class="k">Function</span></span>
-<span class="code-line">    <span class="nf">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">SetPassword</span> <span class="n">chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_PW</span> <span class="o">&amp;</span> <span class="n">chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">SetInfo</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when setting password : step 3"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">210</span></span>
-<span class="code-line">        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="k">Exit</span> <span class="k">Function</span></span>
-<span class="code-line">    <span class="nf">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">AccountDisabled</span> <span class="o">=</span> <span class="k">FALSE</span></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">Put</span> <span class="s">"PasswordExpired"</span><span class="p">,</span> <span class="mi">0</span></span>
-<span class="code-line">    <span class="n">oldFlags</span> <span class="o">=</span> <span class="n">objUser</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"UserFlags"</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">newFlags</span> <span class="o">=</span> <span class="n">oldFlags</span> <span class="ow">Or</span> <span class="n">ADS_UF_DONT_EXPIRE_PASSWD</span></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">Put</span> <span class="s">"UserFlags"</span><span class="p">,</span> <span class="n">newFlags</span></span>
-<span class="code-line">    <span class="n">objUser</span><span class="p">.</span><span class="n">SetInfo</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when setting password expiration : step 4"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">220</span></span>
-<span class="code-line">        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="k">Exit</span> <span class="k">Function</span></span>
-<span class="code-line">    <span class="nf">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="c">' add user account to administrators group</span></span>
-<span class="code-line">    <span class="k">Set</span> <span class="n">objGroup</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"WinNT://"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">"/administrators,group"</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"- ADsPath : "</span> <span class="o">&amp;</span> <span class="n">objUser</span><span class="p">.</span><span class="n">ADsPath</span></span>
-<span class="code-line">    <span class="n">objGroup</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">objUser</span><span class="p">.</span><span class="n">ADsPath</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span></span>
-<span class="code-line">        <span class="n">WriteErr</span> <span class="s">"Error when adding user account to administrators group : step 5"</span></span>
-<span class="code-line">        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">230</span></span>
-<span class="code-line">        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line">        <span class="k">Exit</span> <span class="k">Function</span></span>
-<span class="code-line">    <span class="nf">End</span> <span class="k">If</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span> <span class="s">") has been added"</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">gStrMsg</span> <span class="o">=</span> <span class="n">gStrMsg</span> <span class="o">&amp;</span> <span class="n">vbcrlf</span> <span class="o">&amp;</span> <span class="s">"Adding UserAccount OK"</span></span>
-<span class="code-line">    <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : End"</span></span>
-<span class="code-line"><span class="k">End</span> <span class="k">Function</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Sub</span> <span class="nf">WriteMsg</span><span class="p">(</span><span class="n">strMessage</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">strMessage</span></span>
-<span class="code-line"><span class="k">End</span> <span class="k">Sub</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">Sub</span> <span class="nf">WriteErr</span><span class="p">(</span><span class="n">strMessage</span><span class="p">)</span></span>
-<span class="code-line">    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">strMessage</span></span>
-<span class="code-line">    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&amp;</span> <span class="s">" Src: "</span> <span class="o">&amp;</span> <span class="n">Err</span><span class="p">.</span><span class="n">Source</span> <span class="o">&amp;</span> <span class="s">" Desc: "</span> <span class="o">&amp;</span>  <span class="n">Err</span><span class="p">.</span><span class="n">Description</span></span>
-<span class="code-line">    <span class="n">Err</span><span class="p">.</span><span class="n">Clear</span></span>
-<span class="code-line"><span class="k">End</span> <span class="k">Sub</span></span>
+<h3 id="example">Example</h3>
+<div class="hilitewrapper"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</pre></div></td><td class="code"><div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="c">' specify your new user account info</span>
+<span class="k">Const</span> <span class="n">USERACCOUNT_ID</span> <span class="o">=</span> <span class="s">"newuser1"</span>
+<span class="k">Const</span> <span class="n">USERACCOUNT_PW</span> <span class="o">=</span> <span class="s">"newpasswd!"</span>
+
+<span class="k">Const</span> <span class="n">ADS_UF_DONT_EXPIRE_PASSWD</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">H10000</span>
+
+<span class="k">Dim</span> <span class="n">gStrMsg</span>
+<span class="k">Dim</span> <span class="n">gStrComputerName</span>
+
+
+<span class="k">Call</span> <span class="n">Main</span><span class="p">()</span>
+
+
+<span class="k">Function</span> <span class="nf">Main</span><span class="p">()</span>
+    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span>
+
+    <span class="k">Set</span> <span class="n">wshNetwork</span> <span class="o">=</span> <span class="n">WScript</span><span class="p">.</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">"WScript.Network"</span><span class="p">)</span>
+    <span class="n">gStrComputerName</span> <span class="o">=</span> <span class="n">wshNetwork</span><span class="p">.</span><span class="n">ComputerName</span>
+    <span class="n">WriteMsg</span> <span class="s">"Computer Name: "</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span>
+
+    <span class="n">nRet</span> <span class="o">=</span> <span class="n">Check_UserAccount</span><span class="p">()</span>
+    <span class="k">If</span> <span class="n">nRet</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : nRet "</span> <span class="o">&amp;</span> <span class="n">nRet</span>
+        <span class="n">wscript</span><span class="p">.</span><span class="n">quit</span>
+    <span class="k">End</span> <span class="k">If</span>
+
+    <span class="n">nRet</span> <span class="o">=</span> <span class="n">Add_UserAccount</span><span class="p">()</span>
+    <span class="k">If</span> <span class="n">nRet</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : nRet "</span> <span class="o">&amp;</span> <span class="n">nRet</span>
+        <span class="n">wscript</span><span class="p">.</span><span class="n">quit</span>
+    <span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Function</span>
+
+<span class="c">'</span>
+<span class="c">' Check if user account already exists or not</span>
+<span class="c">'</span>
+<span class="k">Function</span> <span class="nf">Check_UserAccount</span><span class="p">()</span>
+    <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : Start"</span>
+    <span class="n">nRet</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span>
+
+    <span class="k">Set</span> <span class="n">objWMIService</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"winmgmts:\\"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">"\root\cimv2"</span><span class="p">)</span>
+    <span class="k">Set</span> <span class="n">colAccounts</span> <span class="o">=</span> <span class="n">objWMIService</span><span class="p">.</span><span class="n">ExecQuery</span><span class="p">(</span><span class="s">"SELECT * FROM Win32_UserAccount WHERE LocalAccount = 'True' AND Name = '"</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span> <span class="s">"'"</span><span class="p">)</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="k">If</span> <span class="n">colAccounts</span><span class="p">.</span><span class="n">Count</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span>
+            <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span><span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span><span class="s">") does not exists"</span>
+        <span class="k">Else</span>
+            <span class="n">nRet</span> <span class="o">=</span> <span class="mi">100</span>
+            <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span><span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span><span class="s">") already exists"</span>
+        <span class="k">End</span> <span class="k">If</span>
+    <span class="k">Else</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when executing wmi query"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">999</span>
+    <span class="k">End</span> <span class="k">If</span>
+
+    <span class="n">Check_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+    <span class="n">WriteMsg</span> <span class="s">"Check_UserAccount : End"</span>
+<span class="k">End</span> <span class="k">Function</span>
+
+
+<span class="c">'</span>
+<span class="c">' Add New UserAccount to Administrators Group</span>
+<span class="c">'</span>
+<span class="k">Function</span> <span class="nf">Add_UserAccount</span><span class="p">()</span>
+    <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : Start"</span>
+    <span class="n">nRet</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span>
+
+    <span class="k">set</span> <span class="n">objSystem</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"WinNT://"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">""</span><span class="p">)</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when getting domain object : step 1"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span>
+        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+        <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+
+    <span class="k">set</span> <span class="n">objUser</span> <span class="o">=</span> <span class="n">objSystem</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="s">"user"</span><span class="p">,</span> <span class="n">USERACCOUNT_ID</span><span class="p">)</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when creating useraccount : step 2"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span>
+        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+        <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+
+    <span class="n">objUser</span><span class="p">.</span><span class="n">SetPassword</span> <span class="n">chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_PW</span> <span class="o">&amp;</span> <span class="n">chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
+    <span class="n">objUser</span><span class="p">.</span><span class="n">SetInfo</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when setting password : step 3"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">210</span>
+        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+        <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+
+    <span class="n">objUser</span><span class="p">.</span><span class="n">AccountDisabled</span> <span class="o">=</span> <span class="k">FALSE</span>
+    <span class="n">objUser</span><span class="p">.</span><span class="n">Put</span> <span class="s">"PasswordExpired"</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="n">oldFlags</span> <span class="o">=</span> <span class="n">objUser</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"UserFlags"</span><span class="p">)</span>
+    <span class="n">newFlags</span> <span class="o">=</span> <span class="n">oldFlags</span> <span class="ow">Or</span> <span class="n">ADS_UF_DONT_EXPIRE_PASSWD</span>
+    <span class="n">objUser</span><span class="p">.</span><span class="n">Put</span> <span class="s">"UserFlags"</span><span class="p">,</span> <span class="n">newFlags</span>
+    <span class="n">objUser</span><span class="p">.</span><span class="n">SetInfo</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when setting password expiration : step 4"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">220</span>
+        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+        <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+
+    <span class="c">' add user account to administrators group</span>
+    <span class="k">Set</span> <span class="n">objGroup</span> <span class="o">=</span> <span class="n">GetObject</span><span class="p">(</span><span class="s">"WinNT://"</span> <span class="o">&amp;</span> <span class="n">gStrComputerName</span> <span class="o">&amp;</span> <span class="s">"/administrators,group"</span><span class="p">)</span>
+    <span class="n">WriteMsg</span> <span class="s">"- ADsPath : "</span> <span class="o">&amp;</span> <span class="n">objUser</span><span class="p">.</span><span class="n">ADsPath</span>
+    <span class="n">objGroup</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">objUser</span><span class="p">.</span><span class="n">ADsPath</span><span class="p">)</span>
+    <span class="k">If</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+        <span class="n">WriteErr</span> <span class="s">"Error when adding user account to administrators group : step 5"</span>
+        <span class="n">nRet</span> <span class="o">=</span> <span class="o">-</span><span class="mi">230</span>
+        <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+        <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+
+    <span class="n">WriteMsg</span> <span class="s">"UserAccount ("</span> <span class="o">&amp;</span> <span class="n">USERACCOUNT_ID</span> <span class="o">&amp;</span> <span class="s">") has been added"</span>
+
+    <span class="n">gStrMsg</span> <span class="o">=</span> <span class="n">gStrMsg</span> <span class="o">&amp;</span> <span class="n">vbcrlf</span> <span class="o">&amp;</span> <span class="s">"Adding UserAccount OK"</span>
+    <span class="n">Add_UserAccount</span> <span class="o">=</span> <span class="n">nRet</span>
+
+    <span class="n">WriteMsg</span> <span class="s">"Add_UserAccount : End"</span>
+<span class="k">End</span> <span class="k">Function</span>
+
+
+<span class="k">Sub</span> <span class="nf">WriteMsg</span><span class="p">(</span><span class="n">strMessage</span><span class="p">)</span>
+    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">strMessage</span>
+<span class="k">End</span> <span class="k">Sub</span>
+
+
+<span class="k">Sub</span> <span class="nf">WriteErr</span><span class="p">(</span><span class="n">strMessage</span><span class="p">)</span>
+    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">strMessage</span>
+    <span class="n">wscript</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">writeline</span> <span class="n">Err</span><span class="p">.</span><span class="n">Number</span> <span class="o">&amp;</span> <span class="s">" Src: "</span> <span class="o">&amp;</span> <span class="n">Err</span><span class="p">.</span><span class="n">Source</span> <span class="o">&amp;</span> <span class="s">" Desc: "</span> <span class="o">&amp;</span>  <span class="n">Err</span><span class="p">.</span><span class="n">Description</span>
+    <span class="n">Err</span><span class="p">.</span><span class="n">Clear</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </pre></div></div>
+</td></tr></tbody></table></div>
 
             <section id="article-list">
                 <h2>Latest posts</h2>
                 <ol>
+                    <li>
+                        <a href="https://chinium.github.io/2018/linux-bulk-change-same-extension.html" rel="bookmark" title="Permalink to Linux - 확장자 일괄 변경">Linux - 확장자 일괄 변경</a>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-04-03T12:00:00+09:00">Tue 03 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/linux-bulk-change-same-extension.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/linux.html">Linux</a>, <a href="https://chinium.github.io/tag/bash.html">bash</a>, <a href="https://chinium.github.io/tag/rename.html">rename</a></span></p>
+<!-- article-meta: END -->                    </li>
                     <li>
                         <a href="https://chinium.github.io/2018/pelican.html" rel="bookmark" title="Permalink to Pelican">Pelican</a>
 <!-- article-meta: START -->
@@ -223,15 +369,6 @@
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
 <span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/ascii.html">ASCII</a></span></p>
-<!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://chinium.github.io/2018/movie-pacific-rim-uprising.html" rel="bookmark" title="Permalink to Movie - 퍼시픽 림: 업라이징">Movie - 퍼시픽 림: 업라이징</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-03-22T11:00:00+09:00">Thu 22 March 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/movie-pacific-rim-uprising.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/movie.html">Movie</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/2018.html">2018</a>, <a href="https://chinium.github.io/tag/giyereumo-del-toro.html">기예르모 델 토로</a></span></p>
 <!-- article-meta: END -->                    </li>
                 </ol>
             </section>
@@ -273,7 +410,7 @@
               <h5>Categories</h5>
               <ul>
                 <li ><a href="https://chinium.github.io/category/book.html">Book (5)</a></li>
-                <li class="active"><a href="https://chinium.github.io/category/it.html">IT (9)</a></li>
+                <li class="active"><a href="https://chinium.github.io/category/it.html">IT (10)</a></li>
                 <li ><a href="https://chinium.github.io/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://chinium.github.io/category/music.html">Music (120)</a></li>
               </ul>
@@ -306,15 +443,18 @@
                   <li> <a href="https://chinium.github.io/tag/versus.html" class="tag">Versus (10)</a></li>
                   <li> <a href="https://chinium.github.io/tag/1993.html" class="tag">1993 (10)</a></li>
                   <li> <a href="https://chinium.github.io/tag/everything.html" class="tag">Everything (7)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/python.html" class="tag">Python (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kiroro.html" class="tag">Kiroro (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/rename.html" class="tag">rename (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/pelican.html" class="tag">Pelican (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/supermarket-fantasy-concert.html" class="tag">Supermarket Fantasy Concert (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/favicon.html" class="tag">favicon (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/gisulpyeongronsa.html" class="tag">기술평론사 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/shiyoshiyankunokong-ni.html" class="tag">ショーシャンクの空に (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kudo-shizuka.html" class="tag">Kudo Shizuka (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/linux.html" class="tag">Linux (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/higasino-geigo.html" class="tag">히가시노 게이고 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/ascii.html" class="tag">ASCII (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jojeongrae.html" class="tag">조정래 (1)</a></li>
@@ -328,9 +468,9 @@
                   <li> <a href="https://chinium.github.io/tag/javascript.html" class="tag">Javascript (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/nakayama-siciri.html" class="tag">나카야마 시치리 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jeipeob.html" class="tag">제이펍 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bash.html" class="tag">bash (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/tim-robbins.html" class="tag">Tim Robbins (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/morgan-freeman.html" class="tag">Morgan Freeman (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/beonyeog.html" class="tag">번역 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/vbscript.html" class="tag">VBScript (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/stephen-king.html" class="tag">Stephen King (1)</a></li>

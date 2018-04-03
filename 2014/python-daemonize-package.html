@@ -38,108 +38,143 @@
 <article>
 
     </head><body><h3 id="installation">Installation</h3>
-<div class="hilitewrapper"><div class="highlight code"><pre><span class="code-line"><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost python<span class="o">]</span><span class="c1"># pip install daemonize</span></span>
-<span class="code-line"><span class="err">'</span>Downloading/unpacking daemonize</span>
-<span class="code-line">  Downloading daemonize-2.3.1.tar.gz</span>
-<span class="code-line">  Running setup.py egg_info <span class="k">for</span> package daemonize</span>
-<span class="code-line"></span>
-<span class="code-line">Installing collected packages: daemonize</span>
-<span class="code-line">  Running setup.py install <span class="k">for</span> daemonize</span>
-<span class="code-line"></span>
-<span class="code-line">Successfully installed daemonize</span>
-<span class="code-line">Cleaning up...</span>
+<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost python<span class="o">]</span><span class="c1"># pip install daemonize</span>
+<span class="err">'</span>Downloading/unpacking daemonize
+  Downloading daemonize-2.3.1.tar.gz
+  Running setup.py egg_info <span class="k">for</span> package daemonize
+
+Installing collected packages: daemonize
+  Running setup.py install <span class="k">for</span> daemonize
+
+Successfully installed daemonize
+Cleaning up...
 </pre></div></div>
 
 
 <h3 id="help">Help</h3>
-<div class="hilitewrapper"><div class="highlight code"><pre><span class="code-line"><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># python</span></span>
-<span class="code-line">Python <span class="m">2</span>.7.2 <span class="o">(</span>default, Jul  <span class="m">1</span> <span class="m">2011</span>, <span class="m">21</span>:32:15<span class="o">)</span></span>
-<span class="code-line"><span class="o">[</span>GCC <span class="m">4</span>.1.2 <span class="m">20080704</span> <span class="o">(</span>Red Hat <span class="m">4</span>.1.2-48<span class="o">)]</span> on linux2</span>
-<span class="code-line">Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.</span>
-<span class="code-line">&gt;&gt;&gt; import daemonize</span>
-<span class="code-line">&gt;&gt;&gt; dir<span class="o">(</span>daemonize<span class="o">)</span></span>
-<span class="code-line"><span class="o">[</span><span class="s1">'Daemonize'</span>, <span class="s1">'__builtins__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__file__'</span>, <span class="s1">'__name__'</span>, <span class="s1">'__package__'</span>, <span class="s1">'atexit'</span>, <span class="s1">'fcntl'</span>, <span class="s1">'grp'</span>, <span class="s1">'handlers'</span>, <span class="s1">'logging'</span>, <span class="s1">'os'</span>, <span class="s1">'pwd'</span>, <span class="s1">'resource'</span>, <span class="s1">'signal'</span>, <span class="s1">'sys'</span><span class="o">]</span></span>
-<span class="code-line">&gt;&gt;&gt; dir<span class="o">(</span>daemonize.Daemonize<span class="o">)</span></span>
-<span class="code-line"><span class="o">[</span><span class="s1">'__class__'</span>, <span class="s1">'__delattr__'</span>, <span class="s1">'__dict__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__format__'</span>, <span class="s1">'__getattribute__'</span>, <span class="s1">'__hash__'</span>, <span class="s1">'__init__'</span>, <span class="s1">'__module__'</span>, <span class="s1">'__new__'</span>, <span class="s1">'__reduce__'</span>, <span class="s1">'__reduce_ex__'</span>, <span class="s1">'__repr__'</span>, <span class="s1">'__setattr__'</span>, <span class="s1">'__sizeof__'</span>, <span class="s1">'__str__'</span>, <span class="s1">'__subclasshook__'</span>, <span class="s1">'__weakref__'</span>, <span class="s1">'exit'</span>, <span class="s1">'sigterm'</span>, <span class="s1">'start'</span><span class="o">]</span></span>
-<span class="code-line">&gt;&gt;&gt; help<span class="o">(</span>daemonize.Daemonize<span class="o">)</span></span>
-<span class="code-line">Help on class Daemonize in module daemonize:</span>
-<span class="code-line"></span>
-<span class="code-line">class Daemonize<span class="o">(</span>__builtin__.object<span class="o">)</span></span>
-<span class="code-line"> <span class="p">|</span>  Daemonize object</span>
-<span class="code-line"> <span class="p">|</span>  Object constructor expects three arguments:</span>
-<span class="code-line"> <span class="p">|</span>  - app: contains the application name which will be sent to syslog.</span>
-<span class="code-line"> <span class="p">|</span>  - pid: path to the pidfile.</span>
-<span class="code-line"> <span class="p">|</span>  - action: your custom <span class="k">function</span> which will be executed after daemonization.</span>
-<span class="code-line"> <span class="p">|</span>  - keep_fds: optional list of fds which should not be closed.</span>
-<span class="code-line"> <span class="p">|</span>  - auto_close_fds: optional parameter to not close opened fds.</span>
-<span class="code-line"> <span class="p">|</span>  - privileged_action: action that will be executed before drop privileges <span class="k">if</span> user or</span>
-<span class="code-line"> <span class="p">|</span>                       group parameter is provided.</span>
-<span class="code-line"> <span class="p">|</span>                       If you want to transfer anything from privileged_action to action, such as</span>
-<span class="code-line"> <span class="p">|</span>                       opened privileged file descriptor, you should <span class="k">return</span> it from</span>
-<span class="code-line"> <span class="p">|</span>                       privileged_action <span class="k">function</span> and catch it inside action <span class="k">function</span>.</span>
-<span class="code-line"> <span class="p">|</span>  - user: drop privileges to this user <span class="k">if</span> provided.</span>
-<span class="code-line"> <span class="p">|</span>  - group: drop privileges to this group <span class="k">if</span> provided.</span>
-<span class="code-line"> <span class="p">|</span>  - verbose: send debug messages to logger <span class="k">if</span> provided.</span>
-<span class="code-line"> <span class="p">|</span>  - logger: use this logger object instead of creating new one, <span class="k">if</span> provided.</span>
-<span class="code-line"> <span class="p">|</span></span>
-<span class="code-line"> <span class="p">|</span>  Methods defined here:</span>
-<span class="code-line"> <span class="p">|</span></span>
-<span class="code-line"> <span class="p">|</span>  __init__<span class="o">(</span>self, app, pid, action, <span class="nv">keep_fds</span><span class="o">=</span>None, <span class="nv">auto_close_fds</span><span class="o">=</span>True, <span class="nv">privileged_action</span><span class="o">=</span>None, <span class="nv">user</span><span class="o">=</span>None, <span class="nv">group</span><span class="o">=</span>None, <span class="nv">verbose</span><span class="o">=</span>False, <span class="nv">logger</span><span class="o">=</span>None<span class="o">)</span></span>
-<span class="code-line">...</span>
+<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># python</span>
+Python <span class="m">2</span>.7.2 <span class="o">(</span>default, Jul  <span class="m">1</span> <span class="m">2011</span>, <span class="m">21</span>:32:15<span class="o">)</span>
+<span class="o">[</span>GCC <span class="m">4</span>.1.2 <span class="m">20080704</span> <span class="o">(</span>Red Hat <span class="m">4</span>.1.2-48<span class="o">)]</span> on linux2
+Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
+&gt;&gt;&gt; import daemonize
+&gt;&gt;&gt; dir<span class="o">(</span>daemonize<span class="o">)</span>
+<span class="o">[</span><span class="s1">'Daemonize'</span>, <span class="s1">'__builtins__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__file__'</span>, <span class="s1">'__name__'</span>, <span class="s1">'__package__'</span>, <span class="s1">'atexit'</span>, <span class="s1">'fcntl'</span>, <span class="s1">'grp'</span>, <span class="s1">'handlers'</span>, <span class="s1">'logging'</span>, <span class="s1">'os'</span>, <span class="s1">'pwd'</span>, <span class="s1">'resource'</span>, <span class="s1">'signal'</span>, <span class="s1">'sys'</span><span class="o">]</span>
+&gt;&gt;&gt; dir<span class="o">(</span>daemonize.Daemonize<span class="o">)</span>
+<span class="o">[</span><span class="s1">'__class__'</span>, <span class="s1">'__delattr__'</span>, <span class="s1">'__dict__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__format__'</span>, <span class="s1">'__getattribute__'</span>, <span class="s1">'__hash__'</span>, <span class="s1">'__init__'</span>, <span class="s1">'__module__'</span>, <span class="s1">'__new__'</span>, <span class="s1">'__reduce__'</span>, <span class="s1">'__reduce_ex__'</span>, <span class="s1">'__repr__'</span>, <span class="s1">'__setattr__'</span>, <span class="s1">'__sizeof__'</span>, <span class="s1">'__str__'</span>, <span class="s1">'__subclasshook__'</span>, <span class="s1">'__weakref__'</span>, <span class="s1">'exit'</span>, <span class="s1">'sigterm'</span>, <span class="s1">'start'</span><span class="o">]</span>
+&gt;&gt;&gt; help<span class="o">(</span>daemonize.Daemonize<span class="o">)</span>
+Help on class Daemonize in module daemonize:
+
+class Daemonize<span class="o">(</span>__builtin__.object<span class="o">)</span>
+ <span class="p">|</span>  Daemonize object
+ <span class="p">|</span>  Object constructor expects three arguments:
+ <span class="p">|</span>  - app: contains the application name which will be sent to syslog.
+ <span class="p">|</span>  - pid: path to the pidfile.
+ <span class="p">|</span>  - action: your custom <span class="k">function</span> which will be executed after daemonization.
+ <span class="p">|</span>  - keep_fds: optional list of fds which should not be closed.
+ <span class="p">|</span>  - auto_close_fds: optional parameter to not close opened fds.
+ <span class="p">|</span>  - privileged_action: action that will be executed before drop privileges <span class="k">if</span> user or
+ <span class="p">|</span>                       group parameter is provided.
+ <span class="p">|</span>                       If you want to transfer anything from privileged_action to action, such as
+ <span class="p">|</span>                       opened privileged file descriptor, you should <span class="k">return</span> it from
+ <span class="p">|</span>                       privileged_action <span class="k">function</span> and catch it inside action <span class="k">function</span>.
+ <span class="p">|</span>  - user: drop privileges to this user <span class="k">if</span> provided.
+ <span class="p">|</span>  - group: drop privileges to this group <span class="k">if</span> provided.
+ <span class="p">|</span>  - verbose: send debug messages to logger <span class="k">if</span> provided.
+ <span class="p">|</span>  - logger: use this logger object instead of creating new one, <span class="k">if</span> provided.
+ <span class="p">|</span>
+ <span class="p">|</span>  Methods defined here:
+ <span class="p">|</span>
+ <span class="p">|</span>  __init__<span class="o">(</span>self, app, pid, action, <span class="nv">keep_fds</span><span class="o">=</span>None, <span class="nv">auto_close_fds</span><span class="o">=</span>True, <span class="nv">privileged_action</span><span class="o">=</span>None, <span class="nv">user</span><span class="o">=</span>None, <span class="nv">group</span><span class="o">=</span>None, <span class="nv">verbose</span><span class="o">=</span>False, <span class="nv">logger</span><span class="o">=</span>None<span class="o">)</span>
+...
 </pre></div></div>
 
 
 <h3 id="example">Example</h3>
-<div class="hilitewrapper"><div class="highlight code"><pre><span class="code-line"><span></span><span class="c1"># daemonize_ex1.py</span></span>
-<span class="code-line"></span>
-<span class="code-line">import <span class="nb">time</span></span>
-<span class="code-line">import logging</span>
-<span class="code-line">import daemonize</span>
-<span class="code-line"></span>
-<span class="code-line"><span class="nv">pidfile</span> <span class="o">=</span> <span class="s2">"./test.pid"</span></span>
-<span class="code-line"><span class="nv">logfile</span> <span class="o">=</span> <span class="s2">"./test.log"</span></span>
-<span class="code-line"><span class="nv">logger</span> <span class="o">=</span> logging.getLogger<span class="o">(</span>__name__<span class="o">)</span></span>
-<span class="code-line">logger.setLevel<span class="o">(</span>logging.DEBUG<span class="o">)</span></span>
-<span class="code-line">logger.propagate <span class="o">=</span> False</span>
-<span class="code-line"><span class="nv">fh</span> <span class="o">=</span> logging.FileHandler<span class="o">(</span>logfile, <span class="s2">"w"</span><span class="o">)</span></span>
-<span class="code-line">fh.setLevel<span class="o">(</span>logging.DEBUG<span class="o">)</span></span>
-<span class="code-line">logger.addHandler<span class="o">(</span>fh<span class="o">)</span></span>
-<span class="code-line"><span class="nv">keep_fds</span> <span class="o">=</span> <span class="o">[</span>fh.stream.fileno<span class="o">()]</span></span>
-<span class="code-line"></span>
-<span class="code-line">def proc_main<span class="o">()</span>:</span>
-<span class="code-line">        mylog<span class="o">(</span><span class="s2">"proc start"</span><span class="o">)</span></span>
-<span class="code-line">        <span class="k">while</span> True:</span>
-<span class="code-line">                time.sleep<span class="o">(</span><span class="m">3</span><span class="o">)</span></span>
-<span class="code-line">                mylog<span class="o">(</span><span class="s2">"proc loop"</span><span class="o">)</span></span>
-<span class="code-line"></span>
-<span class="code-line">def mylog<span class="o">(</span>msg<span class="o">)</span>:</span>
-<span class="code-line">        logger.debug<span class="o">(</span><span class="s2">"%s %s"</span> % <span class="o">(</span>time.strftime<span class="o">(</span><span class="s2">"%Y-%m-%d %H:%M:%S%z"</span><span class="o">)</span>, msg<span class="o">))</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="nv">daemon</span> <span class="o">=</span> daemonize.Daemonize<span class="o">(</span><span class="nv">app</span><span class="o">=</span><span class="s2">"test_app"</span>, <span class="nv">pid</span><span class="o">=</span>pidfile, <span class="nv">action</span><span class="o">=</span>proc_main, <span class="nv">keep_fds</span><span class="o">=</span>keep_fds<span class="o">)</span></span>
-<span class="code-line">daemon.start<span class="o">()</span></span>
-</pre></div></div>
+<div class="hilitewrapper"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="c1"># daemonize_ex1.py</span>
 
+import <span class="nb">time</span>
+import logging
+import daemonize
+
+<span class="nv">pidfile</span> <span class="o">=</span> <span class="s2">"./test.pid"</span>
+<span class="nv">logfile</span> <span class="o">=</span> <span class="s2">"./test.log"</span>
+<span class="nv">logger</span> <span class="o">=</span> logging.getLogger<span class="o">(</span>__name__<span class="o">)</span>
+logger.setLevel<span class="o">(</span>logging.DEBUG<span class="o">)</span>
+logger.propagate <span class="o">=</span> False
+<span class="nv">fh</span> <span class="o">=</span> logging.FileHandler<span class="o">(</span>logfile, <span class="s2">"w"</span><span class="o">)</span>
+fh.setLevel<span class="o">(</span>logging.DEBUG<span class="o">)</span>
+logger.addHandler<span class="o">(</span>fh<span class="o">)</span>
+<span class="nv">keep_fds</span> <span class="o">=</span> <span class="o">[</span>fh.stream.fileno<span class="o">()]</span>
+
+def proc_main<span class="o">()</span>:
+        mylog<span class="o">(</span><span class="s2">"proc start"</span><span class="o">)</span>
+        <span class="k">while</span> True:
+                time.sleep<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+                mylog<span class="o">(</span><span class="s2">"proc loop"</span><span class="o">)</span>
+
+def mylog<span class="o">(</span>msg<span class="o">)</span>:
+        logger.debug<span class="o">(</span><span class="s2">"%s %s"</span> % <span class="o">(</span>time.strftime<span class="o">(</span><span class="s2">"%Y-%m-%d %H:%M:%S%z"</span><span class="o">)</span>, msg<span class="o">))</span>
+
+<span class="nv">daemon</span> <span class="o">=</span> daemonize.Daemonize<span class="o">(</span><span class="nv">app</span><span class="o">=</span><span class="s2">"test_app"</span>, <span class="nv">pid</span><span class="o">=</span>pidfile, <span class="nv">action</span><span class="o">=</span>proc_main, <span class="nv">keep_fds</span><span class="o">=</span>keep_fds<span class="o">)</span>
+daemon.start<span class="o">()</span>
+</pre></div></div>
+</td></tr></tbody></table></div>
 
 <h3 id="run">Run</h3>
-<div class="hilitewrapper"><div class="highlight code"><pre><span class="code-line"><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># python daemonize_ex1.py</span></span>
-<span class="code-line"><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># ps -ef | grep daemonize</span></span>
-<span class="code-line">root     <span class="m">18370</span>     <span class="m">1</span>  <span class="m">0</span> <span class="m">23</span>:56 ?        <span class="m">00</span>:00:00 python daemonize_ex1.py</span>
-<span class="code-line">root     <span class="m">18403</span> <span class="m">14147</span>  <span class="m">0</span> <span class="m">23</span>:57 pts/0    <span class="m">00</span>:00:00 grep daemonize</span>
-<span class="code-line"><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># tail -f test.log</span></span>
-<span class="code-line"><span class="m">2014</span>-09-01 <span class="m">23</span>:56:59+0900 proc start</span>
-<span class="code-line"><span class="m">2014</span>-09-01 <span class="m">23</span>:57:02+0900 proc loop</span>
-<span class="code-line"><span class="m">2014</span>-09-01 <span class="m">23</span>:57:05+0900 proc loop</span>
-<span class="code-line"><span class="m">2014</span>-09-01 <span class="m">23</span>:57:08+0900 proc loop</span>
-<span class="code-line">^C</span>
-<span class="code-line"><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># cat test.pid</span></span>
-<span class="code-line"><span class="m">18370</span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># kill -TERM `cat test.pid`</span></span>
-<span class="code-line"><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># ps -ef | grep daemonize</span></span>
-<span class="code-line">root     <span class="m">18427</span> <span class="m">14147</span>  <span class="m">0</span> <span class="m">23</span>:57 pts/0    <span class="m">00</span>:00:00 grep daemonize</span>
+<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># python daemonize_ex1.py</span>
+<span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># ps -ef | grep daemonize</span>
+root     <span class="m">18370</span>     <span class="m">1</span>  <span class="m">0</span> <span class="m">23</span>:56 ?        <span class="m">00</span>:00:00 python daemonize_ex1.py
+root     <span class="m">18403</span> <span class="m">14147</span>  <span class="m">0</span> <span class="m">23</span>:57 pts/0    <span class="m">00</span>:00:00 grep daemonize
+<span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># tail -f test.log</span>
+<span class="m">2014</span>-09-01 <span class="m">23</span>:56:59+0900 proc start
+<span class="m">2014</span>-09-01 <span class="m">23</span>:57:02+0900 proc loop
+<span class="m">2014</span>-09-01 <span class="m">23</span>:57:05+0900 proc loop
+<span class="m">2014</span>-09-01 <span class="m">23</span>:57:08+0900 proc loop
+^C
+<span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># cat test.pid</span>
+<span class="m">18370</span><span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># kill -TERM `cat test.pid`</span>
+<span class="o">(</span>dev<span class="o">)[</span>root@localhost daemonize<span class="o">]</span><span class="c1"># ps -ef | grep daemonize</span>
+root     <span class="m">18427</span> <span class="m">14147</span>  <span class="m">0</span> <span class="m">23</span>:57 pts/0    <span class="m">00</span>:00:00 grep daemonize
 </pre></div></div>
 
             <section id="article-list">
                 <h2>Latest posts</h2>
                 <ol>
+                    <li>
+                        <a href="https://chinium.github.io/2018/linux-bulk-change-same-extension.html" rel="bookmark" title="Permalink to Linux - 확장자 일괄 변경">Linux - 확장자 일괄 변경</a>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-04-03T12:00:00+09:00">Tue 03 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/linux-bulk-change-same-extension.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/linux.html">Linux</a>, <a href="https://chinium.github.io/tag/bash.html">bash</a>, <a href="https://chinium.github.io/tag/rename.html">rename</a></span></p>
+<!-- article-meta: END -->                    </li>
                     <li>
                         <a href="https://chinium.github.io/2018/pelican.html" rel="bookmark" title="Permalink to Pelican">Pelican</a>
 <!-- article-meta: START -->
@@ -175,15 +210,6 @@
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
 <span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/ascii.html">ASCII</a></span></p>
-<!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://chinium.github.io/2018/movie-pacific-rim-uprising.html" rel="bookmark" title="Permalink to Movie - 퍼시픽 림: 업라이징">Movie - 퍼시픽 림: 업라이징</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-03-22T11:00:00+09:00">Thu 22 March 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/movie-pacific-rim-uprising.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/movie.html">Movie</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/2018.html">2018</a>, <a href="https://chinium.github.io/tag/giyereumo-del-toro.html">기예르모 델 토로</a></span></p>
 <!-- article-meta: END -->                    </li>
                 </ol>
             </section>
@@ -225,7 +251,7 @@
               <h5>Categories</h5>
               <ul>
                 <li ><a href="https://chinium.github.io/category/book.html">Book (5)</a></li>
-                <li class="active"><a href="https://chinium.github.io/category/it.html">IT (9)</a></li>
+                <li class="active"><a href="https://chinium.github.io/category/it.html">IT (10)</a></li>
                 <li ><a href="https://chinium.github.io/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://chinium.github.io/category/music.html">Music (120)</a></li>
               </ul>
@@ -258,15 +284,18 @@
                   <li> <a href="https://chinium.github.io/tag/versus.html" class="tag">Versus (10)</a></li>
                   <li> <a href="https://chinium.github.io/tag/1993.html" class="tag">1993 (10)</a></li>
                   <li> <a href="https://chinium.github.io/tag/everything.html" class="tag">Everything (7)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/python.html" class="tag">Python (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kiroro.html" class="tag">Kiroro (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/rename.html" class="tag">rename (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/pelican.html" class="tag">Pelican (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/supermarket-fantasy-concert.html" class="tag">Supermarket Fantasy Concert (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/favicon.html" class="tag">favicon (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/gisulpyeongronsa.html" class="tag">기술평론사 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/shiyoshiyankunokong-ni.html" class="tag">ショーシャンクの空に (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kudo-shizuka.html" class="tag">Kudo Shizuka (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/linux.html" class="tag">Linux (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/higasino-geigo.html" class="tag">히가시노 게이고 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/ascii.html" class="tag">ASCII (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jojeongrae.html" class="tag">조정래 (1)</a></li>
@@ -280,9 +309,9 @@
                   <li> <a href="https://chinium.github.io/tag/javascript.html" class="tag">Javascript (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/nakayama-siciri.html" class="tag">나카야마 시치리 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jeipeob.html" class="tag">제이펍 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bash.html" class="tag">bash (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/tim-robbins.html" class="tag">Tim Robbins (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/morgan-freeman.html" class="tag">Morgan Freeman (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/beonyeog.html" class="tag">번역 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/vbscript.html" class="tag">VBScript (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/stephen-king.html" class="tag">Stephen King (1)</a></li>
