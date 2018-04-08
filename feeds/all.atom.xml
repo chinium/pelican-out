@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-08T03:00:00+09:00</updated><entry><title>ASCII Text Banner - figlet</title><link href="https://chinium.github.io/2018/ascii-text-banner-figlet.html" rel="alternate"></link><published>2018-04-08T03:00:00+09:00</published><updated>2018-04-08T03:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/ascii-text-banner-figlet.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-08T10:00:00+09:00</updated><entry><title>Docker 정보 모음</title><link href="https://chinium.github.io/2018/docker-what-is_docker.html" rel="alternate"></link><published>2018-04-08T10:00:00+09:00</published><updated>2018-04-08T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/docker-what-is_docker.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;Docker(도커)는 세계를 선도하는 소프트웨어 컨테이너화 플랫폼이다.&lt;/p&gt;
+&lt;p&gt;오늘날 비즈니스는 기존 애플리케이션과 인프라스트럭처를 잘 유지해야 하는 한편, 한층 다양한 클라우드 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;Docker(도커)는 세계를 선도하는 소프트웨어 컨테이너화 플랫폼이다.&lt;/p&gt;
+&lt;p&gt;오늘날 비즈니스는 기존 애플리케이션과 인프라스트럭처를 잘 유지해야 하는 한편, 한층 다양한 클라우드, 데이터센터, 애플리케이션 아키텍처로 포트폴리오를 합리적으로 개선해 나아가야 하는 디지털 트랜스포매이션을 겪고 있다. Docker는 기업 주도의 컨테이너 움직임이자 모든 애플리케이션을 하이브리드 클라우드로 안내하는 유일한 컨테이너 플랫폼 제공자로서, 애플리케이션과 인프라스트럭처간 진정한 독립을 가능케하고 개발자와 운영자가 각자의 능력을 발휘케하고 더 나은 협력과 혁신을 위한 모델을 탄생케해준다.&lt;/p&gt;
+&lt;p&gt;-- from https://docker.com&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt; Docker 한글 문서 / 영상 모음집 &lt;/strong&gt;&lt;br/&gt;
+- &lt;a href="http://documents.docker.co.kr" target="_blank"&gt;http://documents.docker.co.kr&lt;/a&gt;&lt;/p&gt;</content><category term="Docker"></category></entry><entry><title>ASCII Text Banner - figlet</title><link href="https://chinium.github.io/2018/ascii-text-banner-figlet.html" rel="alternate"></link><published>2018-04-08T03:00:00+09:00</published><updated>2018-04-08T03:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/ascii-text-banner-figlet.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
 URL: &lt;a href="http://www.figlet.org/" target="_blank"&gt;http://www.figlet.org/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="install"&gt;install&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev temp&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# yum …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
@@ -1146,7 +1154,67 @@ Oh No!&lt;br/&gt;
 水溜まり いくつも作っていく&lt;br/&gt;
 いつしか夜になって そこに星空が映って&lt;br/&gt;
 キラキラ輝くといいのに&lt;br/&gt;
-キラキラ輝くといいのに  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="2007"></category><category term="HOME"></category></entry><entry><title>Mr.Children - しるし</title><link href="https://chinium.github.io/2018/mrchildren-sirusi.html" rel="alternate"></link><published>2018-01-27T11:00:00+09:00</published><updated>2018-01-27T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-01-27:/2018/mrchildren-sirusi.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;--&lt;br/&gt;
+キラキラ輝くといいのに  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="2007"></category><category term="HOME"></category></entry><entry><title>마이크로소프트웨어 391호: 인공지능의 체크포인트(The Checkpoint of AI)</title><link href="https://chinium.github.io/2018/book-micro-software-391.html" rel="alternate"></link><published>2018-01-30T10:00:00+09:00</published><updated>2018-01-30T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-01-30:/2018/book-micro-software-391.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/0_JQDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;미래학자나 투자자들은 여러 매체를 통해 강인공지능을 기준으로 이야기하며 낙관과 비관을 오가며 설왕설래하고 있다. 그런 논쟁보다 기술적인 베이스나 준비를 먼저 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/0_JQDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;미래학자나 투자자들은 여러 매체를 통해 강인공지능을 기준으로 이야기하며 낙관과 비관을 오가며 설왕설래하고 있다. 그런 논쟁보다 기술적인 베이스나 준비를 먼저 갖춰, 기반을 다지고 가능성을 점쳐보는게 우선이지 않을까? 어떤 데이터를 어디서 수집할지, 어떻게 정제할지, 어느 학습법을 적용할 것인지, 어떤 인프라를 사용할 것인지, 어떤 결과물을 예상하는지 등 어설픈 열 마디 말보다, 한 번의 행동이 더 중요하다. 인공신경망의 등장 이후 자주 듣게되는 CNN, RNN, GAN은 무엇이며, 어디에 접목할 수 있을까? 희망과 도전으로 인공지능 연구를 이어가는 고독한 개발자와 연구자분들께 힘찬 응원을 보낸다.&lt;/p&gt;
+&lt;p&gt;-- 조병승 마이크로소프트웨어 편집장&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="table-of-contents"&gt;Table of Contents&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Schema
+S1. 약인공지능의 발전과 딥러닝 알고리듬 - 박주형
+S2. 딥마인드의 미션, 모든 것에 대한 이론 - 송호연
+
+Opinions
+O1. 부풀려진 기술, 인공지능에 관한 소고 - 김도균
+O2. 인공지능과 법률분야 그리고 법률 전문가 시스템의 통섭 - 양종모
+
+Future
+F1. 라이언봇의 탄생과 성장 - 강병욱
+F2. 알파고 제로의 알고리듬, 알파 제로 - 팀 휠러(번역 김광연)
+F3. 자율주행의 세계에 뛰어들자 - 송영기
+F4. 썸남썸녀 성공 확률을 예측하자 - 이준범
+
+Technology
+T1. 대용량 상품 카테고리 자동 분류 시스템 개발기 - 남상협, 조현재
+T2. 머신러닝 개발자에게 문제 해결 능력을 묻는다 - 허민석
+T3. 쉽게 쓰이는 GAN - 조용래
+T4. 이미지를 문장으로 설명해주는 딥러닝 모델 - 다니엘 라시먼(번역 한영빈)
+T5. 왓슨에게 한국어를 가르치다.(IBM 김대용 과장) - 오세용 기자
+
+Words
+W1. 글루온으로 구현해보는 한영기계번역 모형 - 전희원
+W2. 구글의 자연어 처리 기술 - 이영민
+W3. 인공지능의 목소리, 음성 합성과 음성 변조 - 배준현
+
+Applied
+A1. 스포츠 속 AI, 빅데이터 넘어 인공지능 시대로 - 김인범
+A2. 머신러닝의 입술에 건배를 - 이종국
+A3. 한의계의 인공지능 기술 현황 - 정원모
+A4. 불리오 개발기를 통해 본 로보어드바이저의 간략한 역사 - 천영록
+A5. CNTK를 이용한 딥러닝 입문 - 제이슨 김
+A6. 한국 문화와 한글을 이해하는 인공지능, 왓슨 - 조현정
+A7. 머신러닝 피드백을 이용한 게임 지표 분석 - 구상은
+
+Research
+R1. 인공지능 채색공부 시키기 - 강성민
+R2. 가짜뉴스 찾기 - 변형진, Deepest팀
+R3. 소리 속 잡음을 지워보자 RNNoise - 진 마크 발린(번역 윤성수)
+R4. 당신의 인공신경망은 안전하십니까? - 김창훈, 윤성국
+
+Enterprise
+E1. Do You Know GW-Basic? - 서광민
+E2. 고려 광종과 리드 헤이스팅스, 시작이 허름해도 꿈이 확실하다면! - 고평석
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;h3 id="link"&gt;Link&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/books/details?id=0_JQDwAAQBAJ" target="_blank"&gt;[Google Play]&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;</content><category term="마이크로소프트웨어"></category></entry><entry><title>Mr.Children - しるし</title><link href="https://chinium.github.io/2018/mrchildren-sirusi.html" rel="alternate"></link><published>2018-01-27T11:00:00+09:00</published><updated>2018-01-27T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-01-27:/2018/mrchildren-sirusi.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;--&lt;br/&gt;
 最初からこうなることが&lt;br/&gt;
 決まっていたみたいに&lt;br/&gt;
 違うテンポで刻む鼓動を互いが聞いてる&lt;br/&gt;
@@ -2026,7 +2094,69 @@ and I love you  &lt;/p&gt;
 僕らに近づいてる&lt;br/&gt;
 I love you&lt;br/&gt;
 and I love you&lt;br/&gt;
-and I love you  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="2005"></category><category term="I ♥ U"></category></entry><entry><title>Mr.Children - 僕らの音</title><link href="https://chinium.github.io/2017/mrchildren-bokuranooto.html" rel="alternate"></link><published>2017-10-17T11:00:00+09:00</published><updated>2017-10-17T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-10-17:/2017/mrchildren-bokuranooto.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;--&lt;br/&gt;
+and I love you  &lt;/p&gt;</content><category term="Mr.Children"></category><category term="2005"></category><category term="I ♥ U"></category></entry><entry><title>마이크로소프트웨어 390호: 오픈의 꿈(The Dream of open)</title><link href="https://chinium.github.io/2017/book-micro-software-390.html" rel="alternate"></link><published>2017-10-20T10:00:00+09:00</published><updated>2017-10-20T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-10-20:/2017/book-micro-software-390.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/_FFJDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;오픈소스와 오픈데이터는 단순히 무료로 쓰면 되는 소스와 데이터가 아니다. 참여, 공유, 기여를 통해 모두 함께 만들어가는 프로젝트다. 오픈소스와 오픈데이터가 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/_FFJDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;오픈소스와 오픈데이터는 단순히 무료로 쓰면 되는 소스와 데이터가 아니다. 참여, 공유, 기여를 통해 모두 함께 만들어가는 프로젝트다. 오픈소스와 오픈데이터가 가져온 변화와 결과 예시로 오픈소스를 왜 알아야 하는지, 어떻게 참여할 수 있는지, 어떻게 기여해야 하는지, 어떻게 지켜야 하는지 알아보자.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="table-of-contents"&gt;Table of Contents&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Schema
+S1. 오픈소스는 어떻게 대세가 됐는가? - 송범근
+S2. 오픈소스 라이선스의 탄생 - 조영준
+
+Opinion
+O1. 일상에서 오픈소스 현상을 바라보는 3가지 시선 - 김도균
+
+Future
+F1. 가볍게 읽어보는 블록체인 이야기 - 오명운
+F2. 이더리움 시작하기 - 제이슨 김
+F3. 블록체인의 미래를 방해하는 적 - 김호광
+
+Technology
+T1. 이길 수 없다면 같은 편에 서라 - 최주열
+T2. 오픈소스에 대한 IBM의생각과 방향 - 정창우
+T3. 오픈소스 기반 클라우드 플랫폼을 이끈 AWS - 윤석찬
+T4. 우아한형제들이 오픈소스를 바라보는 관점, WoowahanJS - 김민태
+T5. 멋진 신세계, 컨테이너 - 이민구
+T6. 오픈소스 서버리스 플랫폼, 오픈위스크 - 공진기
+T7. 아마존 ECS를 위한 새로운 오픈소스 스케줄러, Blox - 김상필
+T8. 하이브리드 클라우드의 방향, MS Azure Stack - 백승주
+
+Working
+W1. 오픈소스 공헌이 개발자에게 미치는 영향 - 임정택
+W2. 오픈소스 백신이 가지는 의미 - 최원혁
+W3. 모바일 앱 테스트 자동화를 위한 애피움 활용 - 황희선
+W4. 모바일 데이터베이스의 강자, Realm - 박민우
+W5. 개발자는 왜 오픈소스를 알아야 하는가 - 박현정
+W6. 서울JS의 시작 - 문현경, 김양원, 이웅재
+W7. 데이터 과학의 놀이터, 오픈데이터 캐글 - 이상열
+
+Applied
+A1. 오토모티브와 오픈소스가 만나면 - 한동준
+A2. 오픈소스로 드론을 날려보자 - 차주경
+
+Research
+R1. 공공데이터포털 분석 - 김학래
+R2. 이미지 인식 기반 쇼핑 앱 '샷핑'과 Faster R-CNN - 남상협
+R3. 자바를 튼튼히 하는 FindBugs 커스텀 결합 탐지기 - 우영식
+R4. 상용 RDBMS와 오픈소스 DB에 대한 데이터베이스 선정 - 권순용
+
+Enterprise
+E1. 오픈소스의 리스크를 관리하는 블랙덕 허브 - 김병선, 전재웅
+E2. 당 태종과 지미 웨일스는 개방성으로 성공을 거뒀다. - 고평석
+E3. 개발자의 시작은 협업과 커뮤니케이션- 이단비, 한민호, 김형종, 나영균
+E4. 우아한 테크캠프의 지향점 - 김정
+E5. 오픈핵에서 시작하는 오픈소스의 꿈 - 조병승
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;h3 id="link"&gt;Link&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/books/details?id=_FFJDwAAQBAJ" target="_blank"&gt;[Google Play]&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;</content><category term="마이크로소프트웨어"></category></entry><entry><title>Mr.Children - 僕らの音</title><link href="https://chinium.github.io/2017/mrchildren-bokuranooto.html" rel="alternate"></link><published>2017-10-17T11:00:00+09:00</published><updated>2017-10-17T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-10-17:/2017/mrchildren-bokuranooto.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;--&lt;br/&gt;
 bye-bye bye-bye bye-bye&lt;br/&gt;
 風の音が鳥の声が 別れの歌に聞こえる&lt;br/&gt;
 会いたい 会えない 会いたい&lt;br/&gt;
@@ -2898,7 +3028,70 @@ BUT YOU ARE ONE  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;代わり映え（かわりばえ）: 바뀐 까닭에 전보다 잘 됨, 바뀐 보람&lt;/li&gt;
 &lt;li&gt;皮肉（ひにく）: 빈정거림, 비꼼, 야유&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Mr.Children"></category><category term="2004"></category><category term="シフクノオト"></category></entry><entry><title>Kiroro - ひとつぶの涙</title><link href="https://chinium.github.io/2017/kiroro-hitotubunonamida.html" rel="alternate"></link><published>2017-07-06T11:00:00+09:00</published><updated>2017-07-06T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-07-06:/2017/kiroro-hitotubunonamida.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;*&lt;br/&gt;
+&lt;/ul&gt;</content><category term="Mr.Children"></category><category term="2004"></category><category term="シフクノオト"></category></entry><entry><title>마이크로소프트웨어 389호: 보안의 자각(Security Awareness)</title><link href="https://chinium.github.io/2017/book-micro-software-389.html" rel="alternate"></link><published>2017-07-13T10:00:00+09:00</published><updated>2017-07-13T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-07-13:/2017/book-micro-software-389.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/bztBDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;클라우드, 빅데이터, IoT, O2O 등 다양한 기술과 서비스가 서로 연결되며 융합하고 있습니다. 취약점 노출과 보안 지침 부재는 개인과 기업을 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/bztBDwAAQBAJ?fife=w400-h600" width="50%"/&gt;&lt;/p&gt;
+&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;클라우드, 빅데이터, IoT, O2O 등 다양한 기술과 서비스가 서로 연결되며 융합하고 있습니다. 취약점 노출과 보안 지침 부재는 개인과 기업을 계속해서 위협하고 있습니다. 우리를 위협해오는 경로와 방법은 무엇이 있으며, 어떤 대비를 하고 있어야 할까요? 관리자, 운영자, 개발자, 사용자 모두 만족할 수 있는 보안의 접점은 어디일까요? 운영체제, 클라우드, 인프라들에 대해 인지하지 못했던 보안의 틈새를 함께 찾아보시죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="table-of-contents"&gt;Table of Contents&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Schema 
+S1. 보안 공백을 노리는 APT 공격, 융합보안으로 맞서자. -남기효 
+S2. 바이러스 이동 경로와 공격 유형 -조영락 
+S3. 세계의 사이버전 그리고 한국은 -정해주 
+
+Opinion 
+O1. 랜섬웨어 인질이 안되려면 -김도균 
+O2. 생체인증기술의 보안 위험성 -전정훈 
+O3. DB전문가를 꿈꾸는 당신에게 -권순용 
+O4. HTTPS가 HTTP보다 빠르다 -ssut 
+
+Future 
+F1. 범죄예측 시스템의 현실적 해석과 도전 -양종모 
+F2. 게임 속 불법행위 봇(Bot) 추적의 과거, 현재, 미래(이은조 팀장) -조병승 기자 
+
+Technology 
+T1. 클라우드 보안을 정복하는 기술 -박형준 
+T2. 신뢰에 기초한 클라우드, MS Azure -노종혁 
+T3. AWS DevOps의 보안 최적화, DevSecOps -임기성 
+T4. 네이버 클라우드 플랫폼의 탄생 -정윤선 
+T5. 클라우드 서비스 보안인증 취득 프로젝트 -노규남, 정대원 
+
+Words 
+W1. 열려라 참깨가 양자 암호를 넘기까지 -이주희 
+
+Applied 
+A1. 개인과 조직 모두를 지키는 윈도10 보안 -백승주 
+A2. 오픈소스 기반 LDAP, FreeIPA 설치하기 -김석 
+A3. MS17-010 취약점 모의 침투 하기 -공재웅, 김주영 
+A4. 컴퓨터 + 네트워크 보안 = 사물인터넷 보안 -서영진 
+
+Research 
+R1. 랜섬웨어 지피지기 -김해광 
+R2. HWP 취약점 CVE-2013-0808 분석 -박지웅, 김현 
+R3. SNSLocker.exe 분석 보고서 -강형민 
+R4. 컴파일은 거들 뿐, 정적 분석으로 시큐어코딩을 완성하라 -제이슨 김 
+R5. 온라인 신용카드 결제, 팩트 체크 -장지윤 
+R6. 대용량 데이터, 성능을 끌어올려라. -윤경빈, 고종호, 심현승 
+
+Enterprise 
+E1. 명 영락제와 피터 틸 -고평석 
+E2. 지능형 영상 보안 시스템, 클라우드 캠 -금상호 
+E3. 지능형 보안 플랫폼의 집약체, KT Wiz Stick -조병승 기자 
+E4. 환경과 약자 안전 IT로 지킨다 -김형준 
+E5. 코딩은 창의적인 글짓기다 -조병승 기자 
+
+MASOLAB 
+MASOLAB. 형태소 분석기 MeCab에 한글 코드 지원하기 -장원준
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;h3 id="link"&gt;Link&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/books/details?id=bztBDwAAQBAJ" target="_blank"&gt;[Google Play]&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;</content><category term="마이크로소프트웨어"></category></entry><entry><title>Kiroro - ひとつぶの涙</title><link href="https://chinium.github.io/2017/kiroro-hitotubunonamida.html" rel="alternate"></link><published>2017-07-06T11:00:00+09:00</published><updated>2017-07-06T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2017-07-06:/2017/kiroro-hitotubunonamida.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;*&lt;br/&gt;
 ひとつぶの涙は何を伝えようとしてこぼれ落ちたの&lt;br/&gt;
 言葉じゃなくたってハートで感じられると信じていたのに  &lt;/p&gt;
 &lt;p&gt;**&lt;br/&gt;
