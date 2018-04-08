@@ -23,7 +23,8 @@ URL: &lt;a href="http://www.figlet.org/" target="_blank"&gt;http://www.figlet.or
 &lt;span class="s1"&gt; ___ |   __/  |  |  (   |     \ \  \ /  (   |  |     |  (   |&lt;/span&gt;
 &lt;span class="s1"&gt;_|  _| \___| _| _| \___/       \_/\_/  \___/  _|    _| \__,_|&lt;/span&gt;
 
-&lt;span class="s1"&gt;[root@my-dev temp]# figlet -f lean "Hello Wold" | tr '&lt;/span&gt; _/&lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;span class="s1"&gt;[root@my-dev temp]# figlet -f lean "Hello World" | tr '&lt;/span&gt; _/&lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+
 
     &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;            &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;
    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()&lt;/span&gt;
@@ -33,11 +34,11 @@ URL: &lt;a href="http://www.figlet.org/" target="_blank"&gt;http://www.figlet.or
 
 
 
-  &lt;span class="o"&gt;()&lt;/span&gt;          &lt;span class="o"&gt;()&lt;/span&gt;            &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()&lt;/span&gt;
- &lt;span class="o"&gt;()&lt;/span&gt;          &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()()&lt;/span&gt;
-&lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;
- &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;
-  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()()&lt;/span&gt;
+  &lt;span class="o"&gt;()&lt;/span&gt;          &lt;span class="o"&gt;()&lt;/span&gt;                      &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()&lt;/span&gt;
+ &lt;span class="o"&gt;()&lt;/span&gt;          &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()()&lt;/span&gt;
+&lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()()&lt;/span&gt;      &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;
+ &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;
+  &lt;span class="o"&gt;()&lt;/span&gt;  &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()()&lt;/span&gt;    &lt;span class="o"&gt;()&lt;/span&gt;        &lt;span class="o"&gt;()&lt;/span&gt;    &lt;span class="o"&gt;()()()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="figlet"></category><category term="ASCII"></category></entry><entry><title>Linux - 확장자 일괄 변경</title><link href="https://chinium.github.io/2018/linux-bulk-change-same-extension.html" rel="alternate"></link><published>2018-04-03T12:00:00+09:00</published><updated>2018-04-03T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-03:/2018/linux-bulk-change-same-extension.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="1-shell-script"&gt;1. Shell Script를 이용한 방법&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; f in *.nn
 &lt;span class="k"&gt;do&lt;/span&gt;
