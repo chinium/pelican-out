@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-08T10:00:00+09:00</updated><entry><title>Docker 정보 모음</title><link href="https://chinium.github.io/2018/docker-what-is_docker.html" rel="alternate"></link><published>2018-04-08T10:00:00+09:00</published><updated>2018-04-08T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/docker-what-is_docker.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/all.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-09T10:00:00+09:00</updated><entry><title>GitHut - A Small place to discover languages in GitHub</title><link href="https://chinium.github.io/2018/githut-a-small-place-to-discover-languages-in-github.html" rel="alternate"></link><published>2018-04-09T10:00:00+09:00</published><updated>2018-04-09T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-09:/2018/githut-a-small-place-to-discover-languages-in-github.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;프로그래밍 언어는 단순히 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴일 뿐만 아니라, 창의력을 코딩하고 디코딩하는 도구다.
+프로그래밍 언어의 역사를 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;프로그래밍 언어는 단순히 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴일 뿐만 아니라, 창의력을 코딩하고 디코딩하는 도구다.
+프로그래밍 언어의 역사를 관찰함으로써 인류가 문제를 더 나은 방식으로 풀어내고 사람간 협업을 촉진시키며 다른 사람의 노력을 재사용해가는 모험을 즐길 수 있다.&lt;br/&gt;
+-- from githut site&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="githut"&gt;GitHut&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub에서 제공하는 API를 이용해 GitHub에 호스팅되고 있는 Repository에 사용되고 있는 프로그래밍 언어 세계의 복잡성을 시각화&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://githut.info/" target="_blank"&gt;http://githut.info/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="sample-image"&gt;Sample Image&lt;/h3&gt;
+&lt;p&gt;&lt;a class="mybox" href="https://chinium.github.io/media/img/githut.png"&gt;&lt;img alt="githut Image" src="https://chinium.github.io/media/img/githut.png" width="100%"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="GitHub"></category><category term="GitHut"></category></entry><entry><title>Docker 정보 모음</title><link href="https://chinium.github.io/2018/docker-what-is_docker.html" rel="alternate"></link><published>2018-04-08T10:00:00+09:00</published><updated>2018-04-08T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/docker-what-is_docker.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
 &lt;p&gt;Docker(도커)는 세계를 선도하는 소프트웨어 컨테이너화 플랫폼이다.&lt;/p&gt;
 &lt;p&gt;오늘날 비즈니스는 기존 애플리케이션과 인프라스트럭처를 잘 유지해야 하는 한편, 한층 다양한 클라우드 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
 &lt;p&gt;Docker(도커)는 세계를 선도하는 소프트웨어 컨테이너화 플랫폼이다.&lt;/p&gt;

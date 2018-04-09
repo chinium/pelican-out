@@ -63,6 +63,11 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 .entry img { display:block; border:1px solid #BDBDBD !important; }
 .entry img.wp-smiley { border:0px !important; }
 .entry a img:hover { background-color:transparent; border:1px solid #E5E5E5 !important; }
+.entry .mybox > img:hover {
+    cursor: pointer;
+    border: 1px solid #999!important;
+    box-shadow: 3px 3px #999;
+}
 .entry .aligncenter, div.aligncenter {	margin:10px auto; }
 .entry .alignleft { float: left; margin:10px 15px 10px 0px; }
 .entry .alignright { float: right; margin:10px 0px 10px 15px; }
@@ -202,3 +207,4 @@ code {
     margin-top: -5px;
     float: right;
 }
+
