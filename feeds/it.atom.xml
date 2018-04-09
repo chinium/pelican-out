@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/ - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-09T10:00:00+09:00</updated><entry><title>GitHut - A Small place to discover languages in GitHub</title><link href="https://chinium.github.io/2018/githut-a-small-place-to-discover-languages-in-github.html" rel="alternate"></link><published>2018-04-09T10:00:00+09:00</published><updated>2018-04-09T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-09:/2018/githut-a-small-place-to-discover-languages-in-github.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
-&lt;p&gt;프로그래밍 언어는 단순히 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴일 뿐만 아니라, 창의력을 코딩하고 디코딩하는 도구다.
-프로그래밍 언어의 역사를 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
-&lt;p&gt;프로그래밍 언어는 단순히 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴일 뿐만 아니라, 창의력을 코딩하고 디코딩하는 도구다.
+&lt;p&gt;프로그래밍 언어는 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴이자, 창의력을 코딩하고 디코딩하는 도구다.
+프로그래밍 언어의 역사를 관찰함으로써 인류가 문제를 …&lt;/p&gt;&lt;/blockquote&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;프로그래밍 언어는 개발자가 프로그램을 만들거나 알고리즘을 표현하기 위해 사용하는 툴이자, 창의력을 코딩하고 디코딩하는 도구다.
 프로그래밍 언어의 역사를 관찰함으로써 인류가 문제를 더 나은 방식으로 풀어내고 사람간 협업을 촉진시키며 다른 사람의 노력을 재사용해가는 모험을 즐길 수 있다.&lt;br/&gt;
 -- from githut site&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -20,7 +20,7 @@
 &lt;p&gt;-- from https://docker.com&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt; Docker 한글 문서 / 영상 모음집 &lt;/strong&gt;&lt;br/&gt;
-- &lt;a href="http://documents.docker.co.kr" target="_blank"&gt;http://documents.docker.co.kr&lt;/a&gt;&lt;/p&gt;</content><category term="Docker"></category></entry><entry><title>ASCII Text Banner - figlet</title><link href="https://chinium.github.io/2018/ascii-text-banner-figlet.html" rel="alternate"></link><published>2018-04-08T03:00:00+09:00</published><updated>2018-04-08T03:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/ascii-text-banner-figlet.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
+- &lt;a href="http://documents.docker.co.kr" target="_blank"&gt;http://documents.docker.co.kr&lt;/a&gt;&lt;/p&gt;</content><category term="Docker"></category></entry><entry><title>figlet - ASCII Text Banner</title><link href="https://chinium.github.io/2018/figlet-ascii-text-banner.html" rel="alternate"></link><published>2018-04-08T03:00:00+09:00</published><updated>2018-04-08T03:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-08:/2018/figlet-ascii-text-banner.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
 URL: &lt;a href="http://www.figlet.org/" target="_blank"&gt;http://www.figlet.org/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="install"&gt;install&lt;/h3&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev temp&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# yum …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;FIGlet - display large characters made up of ordinary screen characters&lt;br/&gt;
