@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/ - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-10T12:00:00+09:00</updated><entry><title>vagrant box prune / remove</title><link href="https://chinium.github.io/2018/vagrant-box-prune-remove.html" rel="alternate"></link><published>2018-04-10T12:00:00+09:00</published><updated>2018-04-10T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-10:/2018/vagrant-box-prune-remove.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 vagrant box subcommand 중에 prune과 remove의 차이를 살펴보자.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>/chinium/ - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-11T03:00:00+09:00</updated><entry><title>SQL – 최근 30일 날짜 리스트</title><link href="https://chinium.github.io/2018/sql-recent-30day-list.html" rel="alternate"></link><published>2018-04-11T03:00:00+09:00</published><updated>2018-04-11T03:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-11:/2018/sql-recent-30day-list.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 '최근 30일 날짜 리스트'를 출력하는 SQL Query를 살펴보자.&lt;/p&gt;
+&lt;h3 id="query-mysql"&gt;Query (MySQL)&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;DATE_SUB&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CURDATE&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="nb"&gt;INTERVAL&lt;/span&gt; &lt;span class="k"&gt;offset&lt;/span&gt; &lt;span class="k"&gt;DAY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;DT&lt;/span&gt;
+&lt;span class="k"&gt;FROM …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 '최근 30일 날짜 리스트'를 출력하는 SQL Query를 살펴보자.&lt;/p&gt;
+&lt;h3 id="query-mysql"&gt;Query (MySQL)&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;DATE_SUB&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CURDATE&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="nb"&gt;INTERVAL&lt;/span&gt; &lt;span class="k"&gt;offset&lt;/span&gt; &lt;span class="k"&gt;DAY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;DT&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="k"&gt;C&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="k"&gt;offset&lt;/span&gt;
+  &lt;span class="k"&gt;FROM&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;days&lt;/span&gt;
+    &lt;span class="k"&gt;FROM&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;
+      &lt;span class="k"&gt;UNION&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;
+  &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;C&lt;/span&gt;
+  &lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="k"&gt;C&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt; &lt;span class="k"&gt;BETWEEN&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;AND&lt;/span&gt; &lt;span class="mi"&gt;29&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;
+&lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;DT&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;h3 id="result"&gt;Result&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2018-03-12
+2018-03-13
+2018-03-14
+2018-03-15
+2018-03-16
+2018-03-17
+2018-03-18
+2018-03-19
+2018-03-20
+2018-03-21
+2018-03-22
+2018-03-23
+2018-03-24
+2018-03-25
+2018-03-26
+2018-03-27
+2018-03-28
+2018-03-29
+2018-03-30
+2018-03-31
+2018-04-01
+2018-04-02
+2018-04-03
+2018-04-04
+2018-04-05
+2018-04-06
+2018-04-07
+2018-04-08
+2018-04-09
+2018-04-10
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="SQL"></category></entry><entry><title>vagrant box prune / remove</title><link href="https://chinium.github.io/2018/vagrant-box-prune-remove.html" rel="alternate"></link><published>2018-04-10T12:00:00+09:00</published><updated>2018-04-10T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-10:/2018/vagrant-box-prune-remove.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 vagrant box subcommand 중에 prune과 remove의 차이를 살펴보자.&lt;/p&gt;
 &lt;p&gt;각각의 사용법은 다음과 같다.&lt;/p&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mac-sample:~ chinium$ vagrant box
 Usage: vagrant box …&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 vagrant box subcommand 중에 prune과 remove의 차이를 살펴보자.&lt;/p&gt;
