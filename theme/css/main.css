@@ -23,9 +23,9 @@ blockquote cite { display:block; padding:10px 20px 0 0; text-align:right; }
 input, textarea { padding:5px; border:1px solid #8A8A8A; background:#EAEAEA; }
 input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
 
-#wrap { margin:0px auto; text-align:left; font-size: 13px; line-height: 1.4; }
-#container { float:right; }
-#sidebar { overflow:hidden; clear:left; text-align:right; width:210px; height:auto; padding:0px 15px 0px 0px; border-right:1px dotted #C8C8C8; }
+#wrap { width:1100px; text-align:left; font-size: 13px; line-height: 1.4; }
+#container { width:800px; float:right; padding: 0px 15px 0px 0px; border-right: 1px dotted #C8C8C8; }
+#sidebar { width:250px; overflow:hidden; clear:left; text-align:right; height:auto; padding:0px 15px 0px 0px; border-right:1px dotted #C8C8C8; }
 #sidebar li { list-style-type:none; }
 #sidebar > li { margin:20px 0px; }
 #sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 45px; }
@@ -153,6 +153,8 @@ input#s { width:70%; height:auto; margin:5px 0px; }
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0px;
+    border: 1px solid #E0E0E0;
+    background: #F8F8F7
 }
 
 /* For use with the code_line-number_word-wrap_switcher_jquery.js Pelican plugin */
@@ -168,6 +170,10 @@ code {
 
 /* Following http://bililite.com/blog/2012/08/05/line-numbering-in-pre-elements/, use CSS to add line numbers to all spans that have the class 'code-line' */
 
+table.highlighttable {
+    border-spacing: 0px;
+}
+
 .highlighttable .linenodiv {
     border: 1px solid #E0E0E0;
     padding: 0 0.8em;
@@ -177,9 +183,7 @@ code {
 
 .highlight {
 	display: inline-block;
-    border: 1px solid #E0E0E0;
     padding: 0 0.8em;
-    background: #F8F8F7;
 }
 
 //.highlight pre {

@@ -24,13 +24,12 @@
   3 byte보다 긴 run 일 경우 압축률이 높아짐  &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Compression"></category><category term="Encoding"></category><category term="Algorithm"></category></entry><entry><title>Python-LZ4 Usage</title><link href="https://chinium.github.io/2018/python-lz4-usage.html" rel="alternate"></link><published>2018-04-13T11:00:00+09:00</published><updated>2018-04-13T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-13:/2018/python-lz4-usage.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="python-lz4"&gt;python-lz4&lt;/h3&gt;
+&lt;/ul&gt;</content><category term="Compression"></category><category term="Encoding"></category><category term="Algorithm"></category></entry><entry><title>Python-LZ4 Usage</title><link href="https://chinium.github.io/2018/python-lz4-usage.html" rel="alternate"></link><published>2018-04-13T11:00:00+09:00</published><updated>2018-04-13T11:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-13:/2018/python-lz4-usage.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 python-lz4 설치 방법 및 사용법에 대해 살펴보자.&lt;/p&gt;
+&lt;h3 id="python-lz4"&gt;python-lz4&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;LZ4 compression library bindings for Python&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://python-lz4.readthedocs.io/en/stable/index.html" target="_blank"&gt;http://python-lz4.readthedocs.io/en/stable/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="install"&gt;Install&lt;/h5&gt;
-&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# pip install …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="python-lz4"&gt;python-lz4&lt;/h3&gt;
+&lt;li&gt;&lt;a href="http://python-lz4.readthedocs.io/en/stable/index.html" target="_blank"&gt;http://python-lz4.readthedocs.io/en …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;이번에는 python-lz4 설치 방법 및 사용법에 대해 살펴보자.&lt;/p&gt;
+&lt;h3 id="python-lz4"&gt;python-lz4&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;LZ4 compression library bindings for Python&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://python-lz4.readthedocs.io/en/stable/index.html" target="_blank"&gt;http://python-lz4.readthedocs.io/en/stable/index.html&lt;/a&gt;&lt;/li&gt;
