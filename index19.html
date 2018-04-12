@@ -31,109 +31,86 @@
 
             <div class="entry">
             <header>
-   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/gateuneo-seonjeong-2018nyeon-10dae-jeonryag-gisul-teurendeu.html" id="page-title">가트너 선정 2018년 10대 전략 기술 트렌드</a></h1>
+   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/run-length-encoding.html" id="page-title">Run Length Encoding</a></h1>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-12T10:00:00+09:00">Thu 12 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/gateuneo-seonjeong-2018nyeon-10dae-jeonryag-gisul-teurendeu.html#disqus_thread"></a></span>    <span class="meta-category">
+<time datetime="2018-04-13T12:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/run-length-encoding.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/gateuneo.html">가트너</a>, <a href="https://chinium.github.io/tag/gartner.html">Gartner</a>, <a href="https://chinium.github.io/tag/strategic-technology-trends-2018.html">Strategic Technology Trends 2018</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/compression.html">Compression</a>, <a href="https://chinium.github.io/tag/encoding.html">Encoding</a>, <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a></span></p>
 <!-- article-meta: END -->            </header>
             <article>
 
-                </head><body><h3 id="gartner-top-10-strategic-technology-trends-for-2018">Gartner Top 10 Strategic Technology Trends for 2018</h3>
+                </head><body><h3 id="run-length-encoding">Run Length Encoding</h3>
 <ul>
-<li>
-<p>Intelligent</p>
-<ol>
-<li>
-<p><strong>AI Foundations</strong> : 인공지능 강화 시스템<br/>
-    2025년까지 의사 결정 향상, 비즈니스 모델, 생태계ㆍ고객 경험 재형성을 위한 AI 능력이 디지털 이니셔티브를 성공으로 이끄는 주 원동력으로 작용할 전망</p>
-</li>
-<li>
-<p><strong>Intelligent Apps and Analytics</strong> : 지능형 앱과 분석</p>
-</li>
-<li><strong>Intelligent Things</strong> : 지능형 사물</li>
-</ol>
-</li>
-<li>
-<p>Digital</p>
-<ol>
-<li><strong>Digital Twins</strong> : 디지털 트윈</li>
-<li>
-<p><strong>Cloud to the Edge</strong> : 클라우드에서 에지로<br/>
-    에지 컴퓨팅은 정보 처리와 콘텐츠 수집, 전달이 해당 정보 소스와 인접한 곳에서 처리되는 컴퓨팅 토폴로지를 말한다. 연결과 대기 시간 문제, 대역폭 제약과 에지에 내장된 다양한 기능 차원에서는 분산 모델이 유리하다. 기업은 인프라 아키텍처 내, 특히 주요 IoT 패턴 설계 시 에지 디자인 패턴을 사용하기 시작해야 한다. 보통 에지와 클라우드가 서로 경쟁하는 접근법이라고 가정하곤 하는데, 이는 컨셉에 대한 기초적인 오해로 인한 것이다.  에지 컴퓨팅에서는 컨텐츠, 컴퓨팅, 프로세싱이 사용자/사물, 즉 네트워킹의 '에지'에 가까이 위치하는 컴퓨팅 토폴로지라고 할 수 있다.</p>
-</li>
-<li>
-<p><strong>Conversational Platform</strong> : 대화형 플랫폼</p>
-</li>
-<li><strong>Immersive Experience</strong> : 몰입 경험</li>
-</ol>
-</li>
-<li>
-<p>Mesh</p>
-<ol>
-<li><strong>Blockchain</strong> : 블록체인</li>
-<li><strong>Event-Driven</strong> : 이벤트 기반 모델</li>
-<li><strong>Continuous Adaptive Risk and Trust</strong> : 지속적이며 적응할 수 있는 리스크 및 신뢰 평가 접근법</li>
-</ol>
-</li>
+<li>데이터의 반복성을 이용하는 가장 간단한 압축 기법</li>
+<li>Run 은 반복되는 문자, Length 는 반복되는 횟수를 의미<ul>
+<li>AAAABBBBBCCCCCCCCDEEEE (22 byte)<br/>
+  =&gt; 4A5B8C1D4E (10 byte)<br/>
+  압축률 : 22 byte / 10 byte = 2.2  </li>
+<li>MyDogHasFleas (13 byte)<br/>
+  =&gt; 1M1y1D1o1g1H1a1s1F1l1e1a1s (26 byte)<br/>
+  압축률 : 13 byte / 26 byte = 0.5 (원시 자료보다 2배 증가)<br/>
+  (반복된 데이터에 적용하지 않으면 비효율적임)</li>
 </ul>
-<h5 id="link">Link</h5>
-<ul>
-<li><a href="https://www.gartner.com/smarterwithgartner/gartner-top-10-strategic-technology-trends-for-2018/" target="_blank">https://www.gartner.com/smarterwithgartner/gartner-top-10-strategic-technology-trends-for-2018/</a></li>
+</li>
+<li>보완방법: 반복되지 않은 데이터의 경우 원데이터를 표현하고, Run length encoding은 반복된 데이터에 적용<ul>
+<li>전치문자 + 데이터의 개수 + 원데이터의 해당문자</li>
+<li>ABCDDDDDDDDEEEEEEEEE ( 19 byte)<br/>
+  =&gt; ABC<em>8D</em>9E ( 9 byte)<br/>
+  압축률 : 19 byte / 9 byte = 2.11<br/>
+  3 byte보다 긴 run 일 경우 압축률이 높아짐  </li>
+</ul>
+</li>
 </ul>
             </article>
             <section id="article-list">
                 <h2>Latest posts</h2>
                 <ol>
                     <li>
-                        <a href="https://chinium.github.io/2018/sql-recent-30day-list.html" rel="bookmark" title="Permalink to SQL – 최근 30일 날짜 리스트">SQL – 최근 30일 날짜 리스트</a>
+                        <a href="https://chinium.github.io/2018/python-lz4-usage.html" rel="bookmark" title="Permalink to Python-LZ4 Usage">Python-LZ4 Usage</a>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-11T03:00:00+09:00">Wed 11 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/sql-recent-30day-list.html#disqus_thread"></a></span>    <span class="meta-category">
+<time datetime="2018-04-13T11:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/python-lz4-usage.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/sql.html">SQL</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/lz4.html">LZ4</a>, <a href="https://chinium.github.io/tag/python-lz4.html">python-lz4</a></span></p>
 <!-- article-meta: END -->                    </li>
                     <li>
-                        <a href="https://chinium.github.io/2018/vagrant-box-prune-remove.html" rel="bookmark" title="Permalink to vagrant box prune / remove">vagrant box prune / remove</a>
+                        <a href="https://chinium.github.io/2018/lz4-compression-algorithm.html" rel="bookmark" title="Permalink to LZ4 Compression Algorithm">LZ4 Compression Algorithm</a>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-10T12:00:00+09:00">Tue 10 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/vagrant-box-prune-remove.html#disqus_thread"></a></span>    <span class="meta-category">
+<time datetime="2018-04-13T10:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/lz4-compression-algorithm.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/vagrant.html">vagrant</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a>, <a href="https://chinium.github.io/tag/lz4.html">LZ4</a></span></p>
 <!-- article-meta: END -->                    </li>
                     <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-forever.html" rel="bookmark" title="Permalink to Mr.Children - Forever">Mr.Children - Forever</a>
+                        <a href="https://chinium.github.io/2018/term-bom-bill-of-material.html" rel="bookmark" title="Permalink to BOM (Bill of Material, 자재목록표)">BOM (Bill of Material, 자재목록표)</a>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-10T11:12:00+09:00">Tue 10 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-forever.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
+<time datetime="2018-04-13T10:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/term-bom-bill-of-material.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2010.html">2010</a>, <a href="https://chinium.github.io/tag/sense.html">SENSE</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/bom.html">BOM</a>, <a href="https://chinium.github.io/tag/bill-of-material.html">Bill of Material</a>, <a href="https://chinium.github.io/tag/jajaemogrogpyo.html">자재목록표</a></span></p>
 <!-- article-meta: END -->                    </li>
                     <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-prelude.html" rel="bookmark" title="Permalink to Mr.Children - Prelude">Mr.Children - Prelude</a>
+                        <a href="https://chinium.github.io/2018/term-kpi-key-performace-indicator.html" rel="bookmark" title="Permalink to KPI (Key Performance Indicator, 핵심성과지표)">KPI (Key Performance Indicator, 핵심성과지표)</a>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-10T11:11:00+09:00">Tue 10 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-prelude.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
+<time datetime="2018-04-13T10:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/term-kpi-key-performace-indicator.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2010.html">2010</a>, <a href="https://chinium.github.io/tag/sense.html">SENSE</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/kpi.html">KPI</a>, <a href="https://chinium.github.io/tag/key-performance-indicator.html">Key Performance Indicator</a>, <a href="https://chinium.github.io/tag/haegsimseonggwajipyo.html">핵심성과지표</a></span></p>
 <!-- article-meta: END -->                    </li>
                     <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-haru.html" rel="bookmark" title="Permalink to Mr.Children - ハル">Mr.Children - ハル</a>
+                        <a href="https://chinium.github.io/2018/gateuneo-seonjeong-2018nyeon-10dae-jeonryag-gisul-teurendeu.html" rel="bookmark" title="Permalink to 가트너 선정 2018년 10대 전략 기술 트렌드">가트너 선정 2018년 10대 전략 기술 트렌드</a>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-10T11:10:00+09:00">Tue 10 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-haru.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
+<time datetime="2018-04-12T10:00:00+09:00">Thu 12 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/gateuneo-seonjeong-2018nyeon-10dae-jeonryag-gisul-teurendeu.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2010.html">2010</a>, <a href="https://chinium.github.io/tag/sense.html">SENSE</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/gateuneo.html">가트너</a>, <a href="https://chinium.github.io/tag/gartner.html">Gartner</a>, <a href="https://chinium.github.io/tag/strategic-technology-trends-2018.html">Strategic Technology Trends 2018</a></span></p>
 <!-- article-meta: END -->                    </li>
                 </ol>
             </section>
@@ -161,7 +138,7 @@
               <h5>Categories</h5>
               <ul>
                 <li ><a href="https://chinium.github.io/category/book.html">Book (8)</a></li>
-                <li ><a href="https://chinium.github.io/category/it.html">IT (17)</a></li>
+                <li ><a href="https://chinium.github.io/category/it.html">IT (22)</a></li>
                 <li ><a href="https://chinium.github.io/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://chinium.github.io/category/music.html">Music (173)</a></li>
               </ul>
@@ -172,83 +149,94 @@
               <aside>
               <h5>Tags</h5>
                 <ul>
-                  <li> <a href="https://chinium.github.io/tag/mrchildren.html" class="tag">Mr.Children (170)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1992.html" class="tag">1992 (18)</a></li>
                   <li> <a href="https://chinium.github.io/tag/142.html" class="tag">1/42 (18)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2002.html" class="tag">2002 (17)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/its-a-wonderful-world.html" class="tag">It'S A WONDERFUL WORLD (15)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/mrchildren-1992-1995.html" class="tag">Mr.Children 1992-1995 (15)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/home.html" class="tag">HOME (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/supermarket-fantasy.html" class="tag">SUPERMARKET FANTASY (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/mrchildren-2001-2005-micro-.html" class="tag">Mr.Children 2001-2005 -micro- (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/shen-hai.html" class="tag">深海 (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1996.html" class="tag">1996 (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2008.html" class="tag">2008 (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2007.html" class="tag">2007 (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/mrchildren-2005-2010-macro-.html" class="tag">Mr.Children 2005-2010 -macro- (14)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/q.html" class="tag">Q (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/mrchildren-1996-2000.html" class="tag">Mr.Children 1996-2000 (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/xiao-lin-wu-shi.html" class="tag">小林武史 (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1994.html" class="tag">1994 (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2000.html" class="tag">2000 (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/i-u.html" class="tag">I ♥ U (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2005.html" class="tag">2005 (13)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/sense.html" class="tag">SENSE (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/shihukunooto.html" class="tag">シフクノオト (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2010.html" class="tag">2010 (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/bolero.html" class="tag">BOLERO (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/atomic-heart.html" class="tag">Atomic Heart (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1997.html" class="tag">1997 (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2004.html" class="tag">2004 (12)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/discovery.html" class="tag">Discovery (11)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/kind-of-love.html" class="tag">Kind of Love (11)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1999.html" class="tag">1999 (11)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/versus.html" class="tag">Versus (10)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1990.html" class="tag">1990 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1992.html" class="tag">1992 (18)</a></li>
                   <li> <a href="https://chinium.github.io/tag/1993.html" class="tag">1993 (10)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/everything.html" class="tag">Everything (7)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/maikeurosopeuteuweeo.html" class="tag">마이크로소프트웨어 (3)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/b-side.html" class="tag">B-SIDE (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/shiyoshiyankunokong-ni.html" class="tag">ショーシャンクの空に (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/linux.html" class="tag">Linux (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1994.html" class="tag">1994 (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1996.html" class="tag">1996 (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1997.html" class="tag">1997 (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/1999.html" class="tag">1999 (11)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2000.html" class="tag">2000 (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2002.html" class="tag">2002 (17)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2004.html" class="tag">2004 (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2005.html" class="tag">2005 (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2007.html" class="tag">2007 (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2008.html" class="tag">2008 (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2010.html" class="tag">2010 (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/2018.html" class="tag">2018 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/algorithm.html" class="tag">Algorithm (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/ascii.html" class="tag">ASCII (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/python.html" class="tag">Python (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/kiroro.html" class="tag">Kiroro (2)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/rename.html" class="tag">rename (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/pelican.html" class="tag">Pelican (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/supermarket-fantasy-concert.html" class="tag">Supermarket Fantasy Concert (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/redis.html" class="tag">Redis (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/atomic-heart.html" class="tag">Atomic Heart (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/b-side.html" class="tag">B-SIDE (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bash.html" class="tag">bash (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/beonyeog.html" class="tag">번역 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bill-of-material.html" class="tag">Bill of Material (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bolero.html" class="tag">BOLERO (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/bom.html" class="tag">BOM (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/chart.html" class="tag">Chart (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/compression.html" class="tag">Compression (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/discovery.html" class="tag">Discovery (11)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/docker.html" class="tag">Docker (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/encoding.html" class="tag">Encoding (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/everything.html" class="tag">Everything (7)</a></li>
                   <li> <a href="https://chinium.github.io/tag/favicon.html" class="tag">favicon (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/gisulpyeongronsa.html" class="tag">기술평론사 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/yaml.html" class="tag">yaml (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/kudo-shizuka.html" class="tag">Kudo Shizuka (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/gong-teng-jing-xiang.html" class="tag">工藤静香 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/higasino-geigo.html" class="tag">히가시노 게이고 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/jojeongrae.html" class="tag">조정래 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/figlet.html" class="tag">figlet (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/ling-mu-ying-zai.html" class="tag">鈴木英哉 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/vagrant.html" class="tag">vagrant (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/jeipeob.html" class="tag">제이펍 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/gartner.html" class="tag">Gartner (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/gateuneo.html" class="tag">가트너 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/gimhyenam.html" class="tag">김혜남 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/gartner.html" class="tag">Gartner (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/vbscript.html" class="tag">VBScript (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/chart.html" class="tag">Chart (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/2018.html" class="tag">2018 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/javascript.html" class="tag">Javascript (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/strategic-technology-trends-2018.html" class="tag">Strategic Technology Trends 2018 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/nakayama-siciri.html" class="tag">나카야마 시치리 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/beonyeog.html" class="tag">번역 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/sql.html" class="tag">SQL (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/docker.html" class="tag">Docker (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/bash.html" class="tag">bash (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/tim-robbins.html" class="tag">Tim Robbins (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/gisulpyeongronsa.html" class="tag">기술평론사 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/github.html" class="tag">GitHub (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/morgan-freeman.html" class="tag">Morgan Freeman (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/1990.html" class="tag">1990 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/githut.html" class="tag">GitHut (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/giyereumo-del-toro.html" class="tag">기예르모 델 토로 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/gong-teng-jing-xiang.html" class="tag">工藤静香 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/haegsimseonggwajipyo.html" class="tag">핵심성과지표 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/higasino-geigo.html" class="tag">히가시노 게이고 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/home.html" class="tag">HOME (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/i-u.html" class="tag">I ♥ U (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/its-a-wonderful-world.html" class="tag">It'S A WONDERFUL WORLD (15)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/jajaemogrogpyo.html" class="tag">자재목록표 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/javascript.html" class="tag">Javascript (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/jeipeob.html" class="tag">제이펍 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/jojeongrae.html" class="tag">조정래 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/key-performance-indicator.html" class="tag">Key Performance Indicator (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/kind-of-love.html" class="tag">Kind of Love (11)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/kiroro.html" class="tag">Kiroro (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/kpi.html" class="tag">KPI (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/kudo-shizuka.html" class="tag">Kudo Shizuka (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/ling-mu-ying-zai.html" class="tag">鈴木英哉 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/linux.html" class="tag">Linux (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/lz4.html" class="tag">LZ4 (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/maikeurosopeuteuweeo.html" class="tag">마이크로소프트웨어 (3)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/morgan-freeman.html" class="tag">Morgan Freeman (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/mrchildren.html" class="tag">Mr.Children (170)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/mrchildren-1992-1995.html" class="tag">Mr.Children 1992-1995 (15)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/mrchildren-1996-2000.html" class="tag">Mr.Children 1996-2000 (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/mrchildren-2001-2005-micro-.html" class="tag">Mr.Children 2001-2005 -micro- (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/mrchildren-2005-2010-macro-.html" class="tag">Mr.Children 2005-2010 -macro- (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/nakayama-siciri.html" class="tag">나카야마 시치리 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/pelican.html" class="tag">Pelican (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/python.html" class="tag">Python (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/python-lz4.html" class="tag">python-lz4 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/q.html" class="tag">Q (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/redis.html" class="tag">Redis (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/rename.html" class="tag">rename (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/sense.html" class="tag">SENSE (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/shen-hai.html" class="tag">深海 (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/shihukunooto.html" class="tag">シフクノオト (12)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/shiyoshiyankunokong-ni.html" class="tag">ショーシャンクの空に (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/sql.html" class="tag">SQL (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/static-site-generator.html" class="tag">Static Site Generator (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/stephen-king.html" class="tag">Stephen King (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/strategic-technology-trends-2018.html" class="tag">Strategic Technology Trends 2018 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/supermarket-fantasy.html" class="tag">SUPERMARKET FANTASY (14)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/supermarket-fantasy-concert.html" class="tag">Supermarket Fantasy Concert (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/tim-robbins.html" class="tag">Tim Robbins (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/vagrant.html" class="tag">vagrant (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/vbscript.html" class="tag">VBScript (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/versus.html" class="tag">Versus (10)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/xiao-lin-wu-shi.html" class="tag">小林武史 (13)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/yaml.html" class="tag">yaml (1)</a></li>
                 </ul>
               </aside>
             </nav>
