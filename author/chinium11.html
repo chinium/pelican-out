@@ -31,42 +31,102 @@
 
             <div class="entry">
             <header>
-   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/run-length-encoding.html" id="page-title">Run Length Encoding</a></h1>
+   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/algorithm-crc.html" id="page-title">CRC (Cyclic Redundancy Check) - 순환 중복 검사</a></h1>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-04-14T16:00:00+09:00">Sat 14 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/algorithm-crc.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a>, <a href="https://chinium.github.io/tag/crc.html">CRC</a></span></p>
+<!-- article-meta: END -->            </header>
+            <article>
+
+                </head><body><h3 id="crc-cyclic-redundancy-check">CRC (Cyclic Redundancy Check)</h3>
+<ul>
+<li>an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. </li>
+<li>Link<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check" target="_blank">https://en.wikipedia.org/wiki/Cyclic_redundancy_check</a></li>
+<li><a href="https://ko.wikipedia.org/wiki/순환_중복_검사" target="_blank">https://ko.wikipedia.org/wiki/순환_중복_검사</a></li>
+</ul>
+</li>
+</ul>
+<h5 id="example">Example</h5>
+<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># Version 0.2 2009.01.25</span>
+<span class="c1"># Copyright (c) 2009, Taoufik El Aoumari</span>
+<span class="c1"># Released under the GPL license http://www.gnu.org/licenses/gpl-3.0.txt</span>
+
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">zlib</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">c_null</span>  <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[00;00m"</span>
+<span class="n">c_red</span>   <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[31;01m"</span>
+<span class="n">c_green</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[32;01m"</span>
+<span class="n">p_reset</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\x08</span><span class="s2">"</span><span class="o">*</span><span class="mi">8</span>
+
+
+<span class="k">def</span> <span class="nf">crc32_checksum</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">crc</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+    <span class="n">buff_size</span> <span class="o">=</span> <span class="mi">65536</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buff_size</span><span class="p">)</span>
+            <span class="n">done</span> <span class="o">+=</span> <span class="n">buff_size</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"</span><span class="si">%7d</span><span class="s2">"</span><span class="o">%</span><span class="p">(</span><span class="n">done</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"%"</span> <span class="o">+</span> <span class="n">p_reset</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">crc</span> <span class="o">=</span> <span class="n">zlib</span><span class="o">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">crc</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">p_reset</span><span class="p">)</span>
+        <span class="nb">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">p_reset</span><span class="p">)</span>
+    <span class="nb">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">crc</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">crc</span> <span class="o">&amp;=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="s2">"</span><span class="si">%.8X</span><span class="s2">"</span> <span class="o">%</span><span class="p">(</span><span class="n">crc</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">crc</span> <span class="o">=</span> <span class="n">crc32_checksum</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+        <span class="n">dest_sum</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"([a-fA-F0-9]{8})"</span><span class="p">,</span> <span class="nb">file</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">crc</span> <span class="o">==</span> <span class="n">dest_sum</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+            <span class="n">c_in</span> <span class="o">=</span> <span class="n">c_green</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">c_in</span> <span class="o">=</span> <span class="n">c_red</span>
+        <span class="n">sfile</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">dest_sum</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%s%s%s</span><span class="s2">   </span><span class="si">%s%s%s%s%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">c_in</span><span class="p">,</span> <span class="n">crc</span><span class="p">,</span> <span class="n">c_null</span><span class="p">,</span> <span class="n">sfile</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c_in</span><span class="p">,</span> <span class="n">dest_sum</span><span class="p">,</span> <span class="n">c_null</span><span class="p">,</span> <span class="n">sfile</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">except</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">crc</span><span class="p">,</span> <span class="s2">"   "</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">continue</span>
+</pre></div></div>
+            </article>
+            <section id="article-list">
+                <h2>Latest posts</h2>
+                <ol>
+                    <li>
+                        <a href="https://chinium.github.io/2018/lzo-compression-algorithm.html" rel="bookmark" title="Permalink to LZO Compression Algorithm">LZO Compression Algorithm</a>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-04-14T10:00:00+09:00">Sat 14 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/lzo-compression-algorithm.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/compression.html">Compression</a>, <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a>, <a href="https://chinium.github.io/tag/lzo.html">LZO</a></span></p>
+<!-- article-meta: END -->                    </li>
+                    <li>
+                        <a href="https://chinium.github.io/2018/run-length-encoding.html" rel="bookmark" title="Permalink to Run Length Encoding">Run Length Encoding</a>
 <!-- article-meta: START -->
 <p class="article-meta">
 <time datetime="2018-04-13T12:00:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/run-length-encoding.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
 <span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/compression.html">Compression</a>, <a href="https://chinium.github.io/tag/encoding.html">Encoding</a>, <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a></span></p>
-<!-- article-meta: END -->            </header>
-            <article>
-
-                </head><body><h3 id="run-length-encoding">Run Length Encoding</h3>
-<ul>
-<li>데이터의 반복성을 이용하는 가장 간단한 압축 기법</li>
-<li>Run 은 반복되는 문자, Length 는 반복되는 횟수를 의미<ul>
-<li>AAAABBBBBCCCCCCCCDEEEE (22 byte)<br/>
-  =&gt; 4A5B8C1D4E (10 byte)<br/>
-  압축률 : 22 byte / 10 byte = 2.2  </li>
-<li>MyDogHasFleas (13 byte)<br/>
-  =&gt; 1M1y1D1o1g1H1a1s1F1l1e1a1s (26 byte)<br/>
-  압축률 : 13 byte / 26 byte = 0.5 (원시 자료보다 2배 증가)<br/>
-  (반복된 데이터에 적용하지 않으면 비효율적임)</li>
-</ul>
-</li>
-<li>보완방법: 반복되지 않은 데이터의 경우 원데이터를 표현하고, Run length encoding은 반복된 데이터에 적용<ul>
-<li>전치문자 + 데이터의 개수 + 원데이터의 해당문자</li>
-<li>ABCDDDDDDDDEEEEEEEEE ( 19 byte)<br/>
-  =&gt; ABC<em>8D</em>9E ( 9 byte)<br/>
-  압축률 : 19 byte / 9 byte = 2.11<br/>
-  3 byte보다 긴 run 일 경우 압축률이 높아짐  </li>
-</ul>
-</li>
-</ul>
-            </article>
-            <section id="article-list">
-                <h2>Latest posts</h2>
-                <ol>
+<!-- article-meta: END -->                    </li>
                     <li>
                         <a href="https://chinium.github.io/2018/mrchildren-inori-namidanokidou.html" rel="bookmark" title="Permalink to Mr.Children - 祈り ～涙の軌道">Mr.Children - 祈り ～涙の軌道</a>
 <!-- article-meta: START -->
@@ -92,26 +152,6 @@
 <!-- article-meta: START -->
 <p class="article-meta">
 <time datetime="2018-04-13T11:09:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-kakoto-miraito-kousinsuru-otoko.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2012.html">2012</a>, <a href="https://chinium.github.io/tag/an-imitation-blood-orange.html">［(AN IMITATION) BLOOD ORANGE］</a></span></p>
-<!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-in-my-town.html" rel="bookmark" title="Permalink to Mr.Children - インマイタウン">Mr.Children - インマイタウン</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-04-13T11:08:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-in-my-town.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2012.html">2012</a>, <a href="https://chinium.github.io/tag/an-imitation-blood-orange.html">［(AN IMITATION) BLOOD ORANGE］</a></span></p>
-<!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-kazoeuta.html" rel="bookmark" title="Permalink to Mr.Children - かぞえうた">Mr.Children - かぞえうた</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-04-13T11:07:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-kazoeuta.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/music.html">Music</a>
         > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
     </span>
@@ -143,7 +183,7 @@
               <h5>Categories</h5>
               <ul>
                 <li ><a href="https://chinium.github.io/category/book.html">Book (8)</a></li>
-                <li ><a href="https://chinium.github.io/category/it.html">IT (22)</a></li>
+                <li ><a href="https://chinium.github.io/category/it.html">IT (25)</a></li>
                 <li ><a href="https://chinium.github.io/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://chinium.github.io/category/music.html">Music (184)</a></li>
               </ul>
@@ -171,7 +211,7 @@
                   <li> <a href="https://chinium.github.io/tag/2010.html" class="tag">2010 (12)</a></li>
                   <li> <a href="https://chinium.github.io/tag/2012.html" class="tag">2012 (11)</a></li>
                   <li> <a href="https://chinium.github.io/tag/2018.html" class="tag">2018 (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/algorithm.html" class="tag">Algorithm (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/algorithm.html" class="tag">Algorithm (4)</a></li>
                   <li> <a href="https://chinium.github.io/tag/an-imitation-blood-orange.html" class="tag">［(AN IMITATION) BLOOD ORANGE］ (11)</a></li>
                   <li> <a href="https://chinium.github.io/tag/ascii.html" class="tag">ASCII (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/atomic-heart.html" class="tag">Atomic Heart (12)</a></li>
@@ -182,7 +222,8 @@
                   <li> <a href="https://chinium.github.io/tag/bolero.html" class="tag">BOLERO (12)</a></li>
                   <li> <a href="https://chinium.github.io/tag/bom.html" class="tag">BOM (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/chart.html" class="tag">Chart (1)</a></li>
-                  <li> <a href="https://chinium.github.io/tag/compression.html" class="tag">Compression (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/compression.html" class="tag">Compression (4)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/crc.html" class="tag">CRC (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/discovery.html" class="tag">Discovery (11)</a></li>
                   <li> <a href="https://chinium.github.io/tag/docker.html" class="tag">Docker (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/encoding.html" class="tag">Encoding (1)</a></li>
@@ -206,6 +247,7 @@
                   <li> <a href="https://chinium.github.io/tag/javascript.html" class="tag">Javascript (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jeipeob.html" class="tag">제이펍 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/jojeongrae.html" class="tag">조정래 (1)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/json.html" class="tag">json (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/key-performance-indicator.html" class="tag">Key Performance Indicator (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kind-of-love.html" class="tag">Kind of Love (11)</a></li>
                   <li> <a href="https://chinium.github.io/tag/kiroro.html" class="tag">Kiroro (2)</a></li>
@@ -214,6 +256,7 @@
                   <li> <a href="https://chinium.github.io/tag/ling-mu-ying-zai.html" class="tag">鈴木英哉 (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/linux.html" class="tag">Linux (2)</a></li>
                   <li> <a href="https://chinium.github.io/tag/lz4.html" class="tag">LZ4 (2)</a></li>
+                  <li> <a href="https://chinium.github.io/tag/lzo.html" class="tag">LZO (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/maikeurosopeuteuweeo.html" class="tag">마이크로소프트웨어 (3)</a></li>
                   <li> <a href="https://chinium.github.io/tag/morgan-freeman.html" class="tag">Morgan Freeman (1)</a></li>
                   <li> <a href="https://chinium.github.io/tag/mrchildren.html" class="tag">Mr.Children (181)</a></li>
