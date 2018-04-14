@@ -49,6 +49,7 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 .article-meta span { display:block; clear:left; }
 .article-meta span.meta-comment { clear:none; }
 #article-main {
+    border-bottom: 1px solid #EAEAEA;
 	padding-bottom: 20px;
 }
 #article-comment {
