@@ -30,81 +30,30 @@
 
             <div class="entry">
             <header>
-   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/algorithm-crc.html" id="page-title">CRC (Cyclic Redundancy Check) - 순환 중복 검사</a></h1>
+   	            <h1><a href="https://chinium.github.io" id="site-title">  </a>  <a href="https://chinium.github.io/2018/zlib-compression-library.html" id="page-title">zlib Compression Library</a></h1>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-04-14T16:00:00+09:00">Sat 14 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/algorithm-crc.html#disqus_thread"></a></span>    <span class="meta-category">
+<time datetime="2018-04-19T10:00:00+09:00">Thu 19 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/zlib-compression-library.html#disqus_thread"></a></span>    <span class="meta-category">
         Category: <a href="https://chinium.github.io/category/it.html">IT</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a>, <a href="https://chinium.github.io/tag/crc.html">CRC</a></span></p>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/compression.html">Compression</a>, <a href="https://chinium.github.io/tag/zlib.html">zlib</a></span></p>
 <!-- article-meta: END -->            </header>
             <article>
                 <section id="article-main">
 
-                </head><body><h3 id="crc-cyclic-redundancy-check">CRC (Cyclic Redundancy Check)</h3>
+                </head><body><h3 id="zlib">zlib</h3>
 <ul>
-<li>an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. </li>
-<li>Link<ul>
-<li><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check" target="_blank">https://en.wikipedia.org/wiki/Cyclic_redundancy_check</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/순환_중복_검사" target="_blank">https://ko.wikipedia.org/wiki/순환_중복_검사</a></li>
+<li>일반적인 용도로 법적 제약 없이 자유롭게 사용가능한 무손실 데이터 압축 라이브러리</li>
+<li>Jean-loup Gailly (compression)와 Mark Adler (decompression)에 의해 작성됨
+  (Jean-loup는 gzip의 주요 제작자이기도 하며, Mark 또한 gzip의 제작자이자 UnZip의 메인 압축 해제 루틴을 작성했으며 Zip의 원작자다. zlib에 사용된 압축 알고리즘은 gzip, Zip과 근본적으로 동일함)</li>
+<li>LZW 압축 방식과 달리 zlib에서 사용되는 압축 방식에서는 데이터를 확장시키지 않음
+  (LZW는 심한 경우 파일 크기를 2~3배까지 커지게 함)</li>
+<li>zlib는 libpng의 필수적인 부분이며 PNG를 지원하는 많은 애플리케이션에서 다양하게 테스트되었음</li>
 </ul>
-</li>
+<h5 id="related-links">Related Links</h5>
+<ul>
+<li><a href="http://zlib.net/" target="_blank">http://zlib.net/</a></li>
 </ul>
-<h5 id="example">Example</h5>
-<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
-<span class="c1"># Version 0.2 2009.01.25</span>
-<span class="c1"># Copyright (c) 2009, Taoufik El Aoumari</span>
-<span class="c1"># Released under the GPL license http://www.gnu.org/licenses/gpl-3.0.txt</span>
-
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">zlib</span><span class="o">,</span> <span class="nn">os</span>
-
-<span class="n">c_null</span>  <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[00;00m"</span>
-<span class="n">c_red</span>   <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[31;01m"</span>
-<span class="n">c_green</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\x1b</span><span class="s2">[32;01m"</span>
-<span class="n">p_reset</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\x08</span><span class="s2">"</span><span class="o">*</span><span class="mi">8</span>
-
-
-<span class="k">def</span> <span class="nf">crc32_checksum</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">crc</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
-    <span class="n">buff_size</span> <span class="o">=</span> <span class="mi">65536</span>
-    <span class="n">size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="n">done</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buff_size</span><span class="p">)</span>
-            <span class="n">done</span> <span class="o">+=</span> <span class="n">buff_size</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"</span><span class="si">%7d</span><span class="s2">"</span><span class="o">%</span><span class="p">(</span><span class="n">done</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"%"</span> <span class="o">+</span> <span class="n">p_reset</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
-                <span class="k">break</span>
-            <span class="n">crc</span> <span class="o">=</span> <span class="n">zlib</span><span class="o">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">crc</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">p_reset</span><span class="p">)</span>
-        <span class="nb">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">p_reset</span><span class="p">)</span>
-    <span class="nb">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">crc</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">crc</span> <span class="o">&amp;=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="s2">"</span><span class="si">%.8X</span><span class="s2">"</span> <span class="o">%</span><span class="p">(</span><span class="n">crc</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">crc</span> <span class="o">=</span> <span class="n">crc32_checksum</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-        <span class="n">dest_sum</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"([a-fA-F0-9]{8})"</span><span class="p">,</span> <span class="nb">file</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">crc</span> <span class="o">==</span> <span class="n">dest_sum</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
-            <span class="n">c_in</span> <span class="o">=</span> <span class="n">c_green</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">c_in</span> <span class="o">=</span> <span class="n">c_red</span>
-        <span class="n">sfile</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">dest_sum</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%s%s%s</span><span class="s2">   </span><span class="si">%s%s%s%s%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">c_in</span><span class="p">,</span> <span class="n">crc</span><span class="p">,</span> <span class="n">c_null</span><span class="p">,</span> <span class="n">sfile</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c_in</span><span class="p">,</span> <span class="n">dest_sum</span><span class="p">,</span> <span class="n">c_null</span><span class="p">,</span> <span class="n">sfile</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-    <span class="k">except</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">crc</span><span class="p">,</span> <span class="s2">"   "</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-        <span class="k">continue</span>
-</pre></div></div>
                 </section>
 
                 <section id="article-comment">
@@ -112,8 +61,8 @@
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                    var disqus_shortname = 'chinium';
-                   var disqus_identifier = '2018/algorithm-crc.html';
-                   var disqus_url = 'https://chinium.github.io/2018/algorithm-crc.html';
+                   var disqus_identifier = '2018/zlib-compression-library.html';
+                   var disqus_url = 'https://chinium.github.io/2018/zlib-compression-library.html';
                    (function() {
                         var dsq = document.createElement('script');
                         dsq.type = 'text/javascript'; dsq.async = true;
@@ -127,6 +76,15 @@
             <section id="article-list">
                 <h2>Latest posts</h2>
                 <ol>
+                    <li>
+                        <a href="https://chinium.github.io/2018/algorithm-crc.html" rel="bookmark" title="Permalink to CRC (Cyclic Redundancy Check) - 순환 중복 검사">CRC (Cyclic Redundancy Check) - 순환 중복 검사</a>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-04-14T16:00:00+09:00">Sat 14 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/algorithm-crc.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://chinium.github.io/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/algorithm.html">Algorithm</a>, <a href="https://chinium.github.io/tag/crc.html">CRC</a></span></p>
+<!-- article-meta: END -->                    </li>
                     <li>
                         <a href="https://chinium.github.io/2018/lzo-compression-algorithm.html" rel="bookmark" title="Permalink to LZO Compression Algorithm">LZO Compression Algorithm</a>
 <!-- article-meta: START -->
@@ -165,16 +123,6 @@
     </span>
 <span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2012.html">2012</a>, <a href="https://chinium.github.io/tag/an-imitation-blood-orange.html">［(AN IMITATION) BLOOD ORANGE］</a></span></p>
 <!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://chinium.github.io/2018/mrchildren-kakoto-miraito-kousinsuru-otoko.html" rel="bookmark" title="Permalink to Mr.Children - 過去と未来と交信する男">Mr.Children - 過去と未来と交信する男</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-04-13T11:09:00+09:00">Fri 13 April 2018</time><span class="meta-comment">, <a href="https://chinium.github.io/2018/mrchildren-kakoto-miraito-kousinsuru-otoko.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://chinium.github.io/category/music.html">Music</a>
-        > <a href="https://chinium.github.io/subcategory/music/mrchildren.html">Mr.Children</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://chinium.github.io/tag/mrchildren.html">Mr.Children</a>, <a href="https://chinium.github.io/tag/2012.html">2012</a>, <a href="https://chinium.github.io/tag/an-imitation-blood-orange.html">［(AN IMITATION) BLOOD ORANGE］</a></span></p>
-<!-- article-meta: END -->                    </li>
                 </ol>
             </section>
             </article>
@@ -201,7 +149,7 @@
               <h5>Categories</h5>
               <ul>
                 <li ><a href="https://chinium.github.io/category/book.html">Book (8)</a></li>
-                <li ><a href="https://chinium.github.io/category/it.html">IT (25)</a></li>
+                <li ><a href="https://chinium.github.io/category/it.html">IT (26)</a></li>
                 <li ><a href="https://chinium.github.io/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://chinium.github.io/category/music.html">Music (184)</a></li>
               </ul>
@@ -223,15 +171,9 @@
         </div>
 
         <div id="footer">
-            <nav>
-                <ul>
-                </ul>
-            </nav>
-
             <div id="credits">
 				<span>© 2018 chinium - Powered by <a href="https://getpelican.com" target="_blank">Pelican</a> and <a href="https://github.com/getpelican/pelican-themes/tree/master/monospace" target="_blank">Monospace</a></span>
             </div>
-
         </div>
 
     <script type="text/javascript">

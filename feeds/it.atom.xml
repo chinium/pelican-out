@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chinium - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-14T16:00:00+09:00</updated><entry><title>CRC (Cyclic Redundancy Check) - 순환 중복 검사</title><link href="https://chinium.github.io/2018/algorithm-crc.html" rel="alternate"></link><published>2018-04-14T16:00:00+09:00</published><updated>2018-04-14T16:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-14:/2018/algorithm-crc.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="crc-cyclic-redundancy-check"&gt;CRC (Cyclic Redundancy Check)&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chinium - IT</title><link href="https://chinium.github.io/" rel="alternate"></link><link href="https://chinium.github.io/feeds/it.atom.xml" rel="self"></link><id>https://chinium.github.io/</id><updated>2018-04-19T10:00:00+09:00</updated><entry><title>zlib Compression Library</title><link href="https://chinium.github.io/2018/zlib-compression-library.html" rel="alternate"></link><published>2018-04-19T10:00:00+09:00</published><updated>2018-04-19T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-19:/2018/zlib-compression-library.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="zlib"&gt;zlib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적인 용도로 법적 제약 없이 자유롭게 사용가능한 무손실 데이터 압축 라이브러리&lt;/li&gt;
+&lt;li&gt;Jean-loup Gailly (compression)와 Mark Adler (decompression)에 …&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="zlib"&gt;zlib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적인 용도로 법적 제약 없이 자유롭게 사용가능한 무손실 데이터 압축 라이브러리&lt;/li&gt;
+&lt;li&gt;Jean-loup Gailly (compression)와 Mark Adler (decompression)에 의해 작성됨
+  (Jean-loup는 gzip의 주요 제작자이기도 하며, Mark 또한 gzip의 제작자이자 UnZip의 메인 압축 해제 루틴을 작성했으며 Zip의 원작자다. zlib에 사용된 압축 알고리즘은 gzip, Zip과 근본적으로 동일함)&lt;/li&gt;
+&lt;li&gt;LZW 압축 방식과 달리 zlib에서 사용되는 압축 방식에서는 데이터를 확장시키지 않음
+  (LZW는 심한 경우 파일 크기를 2~3배까지 커지게 함)&lt;/li&gt;
+&lt;li&gt;zlib는 libpng의 필수적인 부분이며 PNG를 지원하는 많은 애플리케이션에서 다양하게 테스트되었음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="related-links"&gt;Related Links&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zlib.net/" target="_blank"&gt;http://zlib.net/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Compression"></category><category term="zlib"></category></entry><entry><title>CRC (Cyclic Redundancy Check) - 순환 중복 검사</title><link href="https://chinium.github.io/2018/algorithm-crc.html" rel="alternate"></link><published>2018-04-14T16:00:00+09:00</published><updated>2018-04-14T16:00:00+09:00</updated><author><name>chinium</name></author><id>tag:chinium.github.io,2018-04-14:/2018/algorithm-crc.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="crc-cyclic-redundancy-check"&gt;CRC (Cyclic Redundancy Check)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to …&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="crc-cyclic-redundancy-check"&gt;CRC (Cyclic Redundancy Check)&lt;/h3&gt;
 &lt;ul&gt;

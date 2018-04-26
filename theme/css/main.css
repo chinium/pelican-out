@@ -12,23 +12,38 @@
 
 @import url("pygment.css");
 
-body { margin:0px; padding:20px 0px; text-align:center; font-family:Monospace; color:#585858; }
+body { margin:0px; padding:0px; text-align:center; font-family:Monospace; color:#585858; background:#F6F6F6; }
 a, a:visited { text-decoration:none; color: #1241CA; }
 a:hover { text-decoration: underline; }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; text-transform:uppercase; }
 h4, h5, h6 { font-size:15px; }
-h1 { padding:0px 0px 15px; margin:0px 0px 10px 0px; }
+h1 { line-height:60px; padding:0px 0px 15px; margin:0px 0px 10px 0px; }
 blockquote { font-style:italic; border-left: 5px solid #E0E0E0; margin:20px; padding:5px 10px; background: #F9F9F9; }
 blockquote cite { display:block; padding:10px 20px 0 0; text-align:right; }
 input, textarea { padding:5px; border:1px solid #8A8A8A; background:#EAEAEA; }
 input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
 
-#wrap { width:1100px; text-align:left; font-size: 13px; line-height: 1.4; }
-#container { width:800px; float:right; padding: 0px 15px 0px 0px; border-right: 1px dotted #C8C8C8; }
-#sidebar { width:250px; overflow:hidden; clear:left; text-align:right; height:auto; padding:0px 15px 0px 0px; border-right:1px dotted #C8C8C8; font-size:15px; }
+#wrap { width:1100px; text-align:left; font-size: 13px; line-height: 1.4; background:#F6F6F6; }
+#container {
+    width:800px;
+    float:right;
+    padding: 10px 20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 8px #999;
+    -webkit-box-shadow: 0 0 8px #999;
+    box-shadow: 0 0 8px #999;
+    background: #FFF;
+}
+#sidebar {
+    width:240px; overflow:hidden; clear:left; text-align:right; height:auto;
+    padding:10px 15px 0px 0px;
+    font-size:15px;
+}
 #sidebar li { list-style-type:none; }
 #sidebar > li { margin:20px 0px; }
-#sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 45px; }
+#sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 60px; }
 #sidebar h1 > a { color: unset; }
 #sidebar h1 > a:hover { text-shadow: 2px 2px #E0E0E0; }
 #sidebar .description { display:block; width:100%; height:auto; margin:0px 0px 10px 0px; }
@@ -127,15 +142,20 @@ ul.commentlist ul.children li { list-style-type:none; border:1px solid #AAA }
 input#submit { font-weight:bold; }
 input#s { width:70%; height:auto; margin:5px 0px; }
 
-#footer { text-align:center; clear:both; }
-#footer div { margin:30px 0px 0px 0px; padding:30px 0px 0px 0px; border-top:1px dotted #C8C8C8; }
+#footer {
+    text-align:center;
+    clear:both;
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+}
+#footer div { border-top:1px dotted #C8C8C8; }
 #footer li { list-style-type:none; }
 #footer .widget_tag_cloud h2 { display:none; }
 
 /* LWM EDITS */
 #page-title{
     position: relative;
-    top: 8px;
     line-height: 28px;
     text-transform: capitalize;
 }
