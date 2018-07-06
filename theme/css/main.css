@@ -43,8 +43,8 @@ input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
 }
 #sidebar li { list-style-type:none; }
 #sidebar > li { margin:20px 0px; }
-#sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 60px; text-transform: unset; }
-#sidebar h1 > a { color: unset; }
+#sidebar h1 { border-bottom:1px dotted #C8C8C8; line-height: 60px; }
+#sidebar h1 > a { color: unset; text-transform:unset; }
 #sidebar h1 > a:hover { text-shadow: 2px 2px #E0E0E0; }
 #sidebar .description { display:block; width:100%; height:auto; margin:0px 0px 10px 0px; }
 #sidebar aside ul { padding-left: 10px; }
