@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>DevOTG</title><link href="https://www.devotg.com/" rel="alternate"></link><link href="https://www.devotg.com/feeds/all.atom.xml" rel="self"></link><id>https://www.devotg.com/</id><updated>2018-07-08T10:00:00+09:00</updated><entry><title>Book - 브루투스의 심장</title><link href="https://www.devotg.com/2018/ISBN-9788925593289.html" rel="alternate"></link><published>2018-07-08T10:00:00+09:00</published><updated>2018-07-08T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-08:/2018/ISBN-9788925593289.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/N0UKCgAAQBAJ?fife=w400-h600" width="50%"/&gt; &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevOTG</title><link href="https://www.devotg.com/" rel="alternate"></link><link href="https://www.devotg.com/feeds/all.atom.xml" rel="self"></link><id>https://www.devotg.com/</id><updated>2018-07-09T12:00:00+09:00</updated><entry><title>ovsdb-server - How to enable tlsv1_2 only</title><link href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html" rel="alternate"></link><published>2018-07-09T12:00:00+09:00</published><updated>2018-07-09T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-09:/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ovsdb-server-port-6641-6642"&gt;ovsdb-server (Port 6641, 6642)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;- Port 6641 (OVN_Northbound)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# SELECT&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ovsdb-server-port-6641-6642"&gt;ovsdb-server (Port 6641, 6642)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;- Port 6641 (OVN_Northbound)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# SELECT&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"select", "table":"SSL", "where":[]}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"rows"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+            &lt;span class="o"&gt;{&lt;/span&gt;
+                &lt;span class="s2"&gt;"_uuid"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+                    &lt;span class="s2"&gt;"uuid"&lt;/span&gt;,
+                    &lt;span class="s2"&gt;"07061153-385c-4f1c-b983-eede6a532c49"&lt;/span&gt;
+                &lt;span class="o"&gt;]&lt;/span&gt;,
+...snip...
+                &lt;span class="s2"&gt;"ssl_ciphers"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;,
+                &lt;span class="s2"&gt;"ssl_protocols"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;
+            &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# UPDATE&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"update", "table":"SSL", "where": [["_uuid","==",["uuid","07061153-385c-4f1c-b983-eede6a532c49"]]], "row": {"ssl_protocols": "TLSv1.2"}}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"count"&lt;/span&gt;: &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"select", "table":"SSL", "where":[]}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"rows"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+            &lt;span class="o"&gt;{&lt;/span&gt;
+...snip...
+                &lt;span class="s2"&gt;"ssl_ciphers"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;,
+                &lt;span class="s2"&gt;"ssl_protocols"&lt;/span&gt;: &lt;span class="s2"&gt;"TLSv1.2"&lt;/span&gt;
+            &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;- Port 6642 (OVN_Southbound)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# SELECT&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"select", "table":"SSL", "where": []}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"rows"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+            &lt;span class="o"&gt;{&lt;/span&gt;
+                &lt;span class="s2"&gt;"_uuid"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+                    &lt;span class="s2"&gt;"uuid"&lt;/span&gt;,
+                    &lt;span class="s2"&gt;"b375d965-3d62-4536-af48-143ead738612"&lt;/span&gt;
+                &lt;span class="o"&gt;]&lt;/span&gt;,
+...snip...
+                &lt;span class="s2"&gt;"ssl_ciphers"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;,
+                &lt;span class="s2"&gt;"ssl_protocols"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;
+            &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# UPDATE&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"update", "table":"SSL", "where":[], "row":{"ssl_protocols": "TLSv1.2"}}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"count"&lt;/span&gt;: &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# SELECT&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"select", "table":"SSL", "where": []}]' | python -m json.tool&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"rows"&lt;/span&gt;: &lt;span class="o"&gt;[&lt;/span&gt;
+            &lt;span class="o"&gt;{&lt;/span&gt;
+...snip...
+                &lt;span class="s2"&gt;"ssl_ciphers"&lt;/span&gt;: &lt;span class="s2"&gt;""&lt;/span&gt;,
+                &lt;span class="s2"&gt;"ssl_protocols"&lt;/span&gt;: &lt;span class="s2"&gt;"TLSv1.2"&lt;/span&gt;
+            &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Ref.&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://relaxdiego.com/2014/09/ovsdb.html" target="_blank"&gt;https://relaxdiego.com/2014/09/ovsdb.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tools.ietf.org/id/draft-pfaff-ovsdb-proto-02.html#rfc.section.5.2.3" target="_blank"&gt;https://tools.ietf.org/id/draft-pfaff-ovsdb-proto-02.html#rfc.section.5.2.3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="oVirt"></category><category term="ovsdb-server"></category><category term="tls"></category></entry><entry><title>Book - 브루투스의 심장</title><link href="https://www.devotg.com/2018/ISBN-9788925593289.html" rel="alternate"></link><published>2018-07-08T10:00:00+09:00</published><updated>2018-07-08T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-08:/2018/ISBN-9788925593289.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img alt="image-frontcover" src="https://books.google.com/books/content/images/frontcover/N0UKCgAAQBAJ?fife=w400-h600" width="50%"/&gt; &lt;/p&gt;
 &lt;p&gt;저자: 히가시노 게이고&lt;br/&gt;
 장르: 문학 모음집 / 아시아 / 일본&lt;br/&gt;
 페이지: 392&lt;br/&gt;

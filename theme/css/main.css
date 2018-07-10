@@ -168,7 +168,7 @@ input#s { width:70%; height:auto; margin:5px 0px; }
 #page-title{
     position: relative;
     line-height: 28px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 #page-title:hover {
     text-shadow: 2px 2px #E0E0E0;
