@@ -31,112 +31,27 @@
 
             <div class="entry">
             <header>
-   	            <h1><a href="https://www.devotg.com" id="site-title">  </a>  <a href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html" id="page-title">ovsdb-server - How to enable tlsv1_2 only</a></h1>
+   	            <h1><a href="https://www.devotg.com" id="site-title">  </a>  <a href="https://www.devotg.com/2018/ISBN-9791196123420.html" id="page-title">Book - 속죄의 소나타</a></h1>
 <!-- article-meta: START -->
 <p class="article-meta">
-<time datetime="2018-07-09T12:00:00+09:00">Mon 09 July 2018</time><span class="meta-comment">, <a href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://www.devotg.com/category/it.html">IT</a>
+<time datetime="2018-07-14T10:00:00+09:00">Sat 14 July 2018</time><span class="meta-comment">, <a href="https://www.devotg.com/2018/ISBN-9791196123420.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://www.devotg.com/category/book.html">Book</a>
     </span>
-<span class="meta-tags">Tag: <a href="https://www.devotg.com/tag/ovirt.html">oVirt</a>, <a href="https://www.devotg.com/tag/ovsdb-server.html">ovsdb-server</a>, <a href="https://www.devotg.com/tag/tls.html">tls</a></span></p>
+<span class="meta-tags">Tag: <a href="https://www.devotg.com/tag/nakayama-siciri.html">나카야마 시치리</a>, <a href="https://www.devotg.com/tag/2011.html">2011</a>, <a href="https://www.devotg.com/tag/toread.html">TOREAD</a></span></p>
 <!-- article-meta: END -->            </header>
             <article>
                 <section id="article-main">
 
-                </head><body><h3 id="ovsdb-server-port-6641-6642">ovsdb-server (Port 6641, 6642)</h3>
-<p><strong>- Port 6641 (OVN_Northbound)</strong></p>
-<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="c1"># SELECT</span>
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"select", "table":"SSL", "where":[]}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"rows"</span>: <span class="o">[</span>
-            <span class="o">{</span>
-                <span class="s2">"_uuid"</span>: <span class="o">[</span>
-                    <span class="s2">"uuid"</span>,
-                    <span class="s2">"07061153-385c-4f1c-b983-eede6a532c49"</span>
-                <span class="o">]</span>,
-...snip...
-                <span class="s2">"ssl_ciphers"</span>: <span class="s2">""</span>,
-                <span class="s2">"ssl_protocols"</span>: <span class="s2">""</span>
-            <span class="o">}</span>
-        <span class="o">]</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-
-<span class="c1"># UPDATE</span>
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"update", "table":"SSL", "where": [["_uuid","==",["uuid","07061153-385c-4f1c-b983-eede6a532c49"]]], "row": {"ssl_protocols": "TLSv1.2"}}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"count"</span>: <span class="m">1</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op":"select", "table":"SSL", "where":[]}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"rows"</span>: <span class="o">[</span>
-            <span class="o">{</span>
-...snip...
-                <span class="s2">"ssl_ciphers"</span>: <span class="s2">""</span>,
-                <span class="s2">"ssl_protocols"</span>: <span class="s2">"TLSv1.2"</span>
-            <span class="o">}</span>
-        <span class="o">]</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-</pre></div></div>
-
-
-<p><strong>- Port 6642 (OVN_Southbound)</strong></p>
-<div class="hilitewrapper"><div class="highlight"><pre><span></span><span class="c1"># SELECT</span>
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"select", "table":"SSL", "where": []}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"rows"</span>: <span class="o">[</span>
-            <span class="o">{</span>
-                <span class="s2">"_uuid"</span>: <span class="o">[</span>
-                    <span class="s2">"uuid"</span>,
-                    <span class="s2">"b375d965-3d62-4536-af48-143ead738612"</span>
-                <span class="o">]</span>,
-...snip...
-                <span class="s2">"ssl_ciphers"</span>: <span class="s2">""</span>,
-                <span class="s2">"ssl_protocols"</span>: <span class="s2">""</span>
-            <span class="o">}</span>
-        <span class="o">]</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-
-<span class="c1"># UPDATE</span>
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"update", "table":"SSL", "where":[], "row":{"ssl_protocols": "TLSv1.2"}}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"count"</span>: <span class="m">1</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-
-<span class="c1"># SELECT</span>
-<span class="o">[</span>root@my-dev ~<span class="o">]</span><span class="c1"># ovsdb-client transact unix:/var/run/openvswitch/ovnsb_db.sock '["OVN_Southbound", {"op":"select", "table":"SSL", "where": []}]' | python -m json.tool</span>
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">"rows"</span>: <span class="o">[</span>
-            <span class="o">{</span>
-...snip...
-                <span class="s2">"ssl_ciphers"</span>: <span class="s2">""</span>,
-                <span class="s2">"ssl_protocols"</span>: <span class="s2">"TLSv1.2"</span>
-            <span class="o">}</span>
-        <span class="o">]</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-</pre></div></div>
-
-
-<ul>
-<li>Ref.<ul>
-<li><a href="https://relaxdiego.com/2014/09/ovsdb.html" target="_blank">https://relaxdiego.com/2014/09/ovsdb.html</a></li>
-<li><a href="https://tools.ietf.org/id/draft-pfaff-ovsdb-proto-02.html#rfc.section.5.2.3" target="_blank">https://tools.ietf.org/id/draft-pfaff-ovsdb-proto-02.html#rfc.section.5.2.3</a></li>
-<li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1459441" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1459441</a></li>
-<li><a href="http://docs.openvswitch.org/en/latest/ref/ovsdb-server.7/" target="_blank">http://docs.openvswitch.org/en/latest/ref/ovsdb-server.7/</a></li>
-</ul>
-</li>
-</ul>
+                </head><body><p><img alt="image-frontcover" src="http://image.yes24.com/momo/TopCate1720/MidCate008/171977880.jpg" width="50%"/> </p>
+<p>저자: 나카야마 시치리
+장르: 문학 / 소설 / 아시아 / 일본<br/>
+페이지: 388<br/>
+전자책 발행일: 2017년 11월 22일<br/>
+발행인: 블루홀6
+ISBN: 9788925593289  </p>
+<p><a href="http://www.yes24.com/24/goods/56935781?scode=029" target="_blank">[Yes24]</a> </p>
+<hr/>
+<h3 id="review">Review :</h3>
                 </section>
 
                 <section id="article-comment">
@@ -144,8 +59,8 @@
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                    var disqus_shortname = 'DevOTG';
-                   var disqus_identifier = '2018/ovsdb-server-how-to-enable-tlsv1_2-only.html';
-                   var disqus_url = 'https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html';
+                   var disqus_identifier = '2018/ISBN-9791196123420.html';
+                   var disqus_url = 'https://www.devotg.com/2018/ISBN-9791196123420.html';
                    (function() {
                         var dsq = document.createElement('script');
                         dsq.type = 'text/javascript'; dsq.async = true;
@@ -159,6 +74,15 @@
             <section id="article-list">
                 <h2>Latest posts</h2>
                 <ol>
+                    <li>
+                        <a href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html" rel="bookmark" title="Permalink to ovsdb-server - How to enable tlsv1_2 only">ovsdb-server - How to enable tlsv1_2 only</a>
+<!-- article-meta: START -->
+<p class="article-meta">
+<time datetime="2018-07-09T12:00:00+09:00">Mon 09 July 2018</time><span class="meta-comment">, <a href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html#disqus_thread"></a></span>    <span class="meta-category">
+        Category: <a href="https://www.devotg.com/category/it.html">IT</a>
+    </span>
+<span class="meta-tags">Tag: <a href="https://www.devotg.com/tag/ovirt.html">oVirt</a>, <a href="https://www.devotg.com/tag/ovsdb-server.html">ovsdb-server</a>, <a href="https://www.devotg.com/tag/tls.html">tls</a></span></p>
+<!-- article-meta: END -->                    </li>
                     <li>
                         <a href="https://www.devotg.com/2018/ISBN-9788925593289.html" rel="bookmark" title="Permalink to Book - 브루투스의 심장">Book - 브루투스의 심장</a>
 <!-- article-meta: START -->
@@ -195,15 +119,6 @@
     </span>
 <span class="meta-tags">Tag: <a href="https://www.devotg.com/tag/algorithm.html">Algorithm</a>, <a href="https://www.devotg.com/tag/crc.html">CRC</a></span></p>
 <!-- article-meta: END -->                    </li>
-                    <li>
-                        <a href="https://www.devotg.com/2018/lzo-compression-algorithm.html" rel="bookmark" title="Permalink to LZO Compression Algorithm">LZO Compression Algorithm</a>
-<!-- article-meta: START -->
-<p class="article-meta">
-<time datetime="2018-04-14T10:00:00+09:00">Sat 14 April 2018</time><span class="meta-comment">, <a href="https://www.devotg.com/2018/lzo-compression-algorithm.html#disqus_thread"></a></span>    <span class="meta-category">
-        Category: <a href="https://www.devotg.com/category/it.html">IT</a>
-    </span>
-<span class="meta-tags">Tag: <a href="https://www.devotg.com/tag/compression.html">Compression</a>, <a href="https://www.devotg.com/tag/algorithm.html">Algorithm</a>, <a href="https://www.devotg.com/tag/lzo.html">LZO</a></span></p>
-<!-- article-meta: END -->                    </li>
                 </ol>
             </section>
             </article>
@@ -229,7 +144,7 @@
             <nav>
               <h5>Categories</h5>
               <ul>
-                <li ><a href="https://www.devotg.com/category/book.html">Book (10)</a></li>
+                <li ><a href="https://www.devotg.com/category/book.html">Book (11)</a></li>
                 <li ><a href="https://www.devotg.com/category/it.html">IT (27)</a></li>
                 <li ><a href="https://www.devotg.com/category/movie.html">Movie (2)</a></li>
                 <li ><a href="https://www.devotg.com/category/music.html">Music (184)</a></li>
