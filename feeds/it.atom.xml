@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>DevOTG - IT</title><link href="https://www.devotg.com/" rel="alternate"></link><link href="https://www.devotg.com/feeds/it.atom.xml" rel="self"></link><id>https://www.devotg.com/</id><updated>2018-07-09T12:00:00+09:00</updated><entry><title>ovsdb-server - How to enable tlsv1_2 only</title><link href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html" rel="alternate"></link><published>2018-07-09T12:00:00+09:00</published><updated>2018-07-09T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-09:/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ovsdb-server-port-6641-6642"&gt;ovsdb-server (Port 6641, 6642)&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevOTG - IT</title><link href="https://www.devotg.com/" rel="alternate"></link><link href="https://www.devotg.com/feeds/it.atom.xml" rel="self"></link><id>https://www.devotg.com/</id><updated>2018-08-30T12:00:00+09:00</updated><entry><title>Install PIP on CentOS 6</title><link href="https://www.devotg.com/2018/install-pip-on-centos-6.html" rel="alternate"></link><published>2018-08-30T12:00:00+09:00</published><updated>2018-08-30T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-08-30:/2018/install-pip-on-centos-6.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="pip"&gt;PIP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A tool for installing and managing Python packages  &lt;/li&gt;
+&lt;li&gt;https://pypi.python.org/pypi/pip  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;아래와 같은 …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="pip"&gt;PIP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A tool for installing and managing Python packages  &lt;/li&gt;
+&lt;li&gt;https://pypi.python.org/pypi/pip  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;아래와 같은 SSL 관련 에러 메세지가 나오는 경우&lt;/p&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Could not fetch URL https://pypi.python.org/simple/Django/: There was a problem confirming the ssl certificate:
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pip 1.5.6 소스 설치 후 pip upgrade&lt;/p&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://pypi.python.org/packages/source/p/pip/pip-1.5.6.tar.gz -O - &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+tar xvfpz - &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; pip-1.5.6 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; python setup.py install
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="pip"></category><category term="centos6"></category></entry><entry><title>LDAP Filter using userAccountControl flags</title><link href="https://www.devotg.com/2018/ldap-filter-using-useraccountcontrol-flags.html" rel="alternate"></link><published>2018-07-31T12:00:00+09:00</published><updated>2018-07-31T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-31:/2018/ldap-filter-using-useraccountcontrol-flags.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objectClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objectCategory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail&lt;/span&gt;&lt;span class="o"&gt;=*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;userAccountControl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;840.113556&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;803&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;512&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(!&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;userAccountControl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;840.113556&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objectClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objectCategory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail&lt;/span&gt;&lt;span class="o"&gt;=*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;userAccountControl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;840.113556&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;803&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;512&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(!&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;userAccountControl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;840.113556&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;803&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Ref.&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.microsoft.com/en-gb/help/305144/how-to-use-the-useraccountcontrol-flags-to-manipulate-user-account-pro" target="_blank"&gt;https://support.microsoft.com/en-gb/help/305144/how-to-use-the-useraccountcontrol-flags-to-manipulate-user-account-pro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.selfadsi.org/ldap-filter.htm#BitAndOr" target="_blank"&gt;http://www.selfadsi.org/ldap-filter.htm#BitAndOr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="LDAP"></category><category term="userAccountControl"></category></entry><entry><title>ovsdb-server - How to enable tlsv1_2 only</title><link href="https://www.devotg.com/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html" rel="alternate"></link><published>2018-07-09T12:00:00+09:00</published><updated>2018-07-09T12:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-07-09:/2018/ovsdb-server-how-to-enable-tlsv1_2-only.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ovsdb-server-port-6641-6642"&gt;ovsdb-server (Port 6641, 6642)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;- Port 6641 (OVN_Northbound)&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# SELECT&lt;/span&gt;
 &lt;span class="o"&gt;[&lt;/span&gt;root@my-dev ~&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# ovsdb-client transact unix:/var/run/openvswitch/ovnnb_db.sock '["OVN_Northbound", {"op …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="ovsdb-server-port-6641-6642"&gt;ovsdb-server (Port 6641, 6642)&lt;/h3&gt;
@@ -96,7 +146,32 @@
 &lt;li&gt;&lt;a href="http://docs.openvswitch.org/en/latest/ref/ovsdb-server.7/" target="_blank"&gt;http://docs.openvswitch.org/en/latest/ref/ovsdb-server.7/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="oVirt"></category><category term="ovsdb-server"></category><category term="tls"></category></entry><entry><title>zlib Compression Library</title><link href="https://www.devotg.com/2018/zlib-compression-library.html" rel="alternate"></link><published>2018-04-19T10:00:00+09:00</published><updated>2018-04-19T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-04-19:/2018/zlib-compression-library.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="zlib"&gt;zlib&lt;/h3&gt;
+&lt;/ul&gt;</content><category term="oVirt"></category><category term="ovsdb-server"></category><category term="tls"></category></entry><entry><title>Crypt-SHA512</title><link href="https://www.devotg.com/2018/crypt-sha512.html" rel="alternate"></link><published>2018-06-12T10:00:00+09:00</published><updated>2018-06-12T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-06-12:/2018/crypt-sha512.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="crypt-sha512"&gt;Crypt-SHA512&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python -c 'import crypt; print(crypt.crypt("My Password", "$6$MySalt1234"))'&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;MySalt1234&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;UvP14uoOF6drOwBkkUZbAmjp7Krual9lbEO0TNipoltO0vxlStXMmKbB9zX4zoHpq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;z3mJ0WFH8pCrc2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nNv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="crypt-sha512"&gt;Crypt-SHA512&lt;/h3&gt;
+&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python -c 'import crypt; print(crypt.crypt("My Password", "$6$MySalt1234"))'&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;MySalt1234&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;UvP14uoOF6drOwBkkUZbAmjp7Krual9lbEO0TNipoltO0vxlStXMmKbB9zX4zoHpq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;z3mJ0WFH8pCrc2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nNv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="crypt"></category><category term="sha512"></category></entry><entry><title>Parts of an regular web url</title><link href="https://www.devotg.com/2018/parts-of-an-regular-web-url.html" rel="alternate"></link><published>2018-05-12T10:00:00+09:00</published><updated>2018-05-12T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-05-12:/2018/parts-of-an-regular-web-url.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;                                                        | request ----------------------------------------------- |
+                                                        | path ------------------- |                              |
+        | authorization | | domain -------------- |     | directory ---- || file - | | query ---------------- |   |
+        |               | |                       |     |                ||        | |                        |   |
+
+https://username:password@www.subdomain.example.com:1234/folder/subfolder/index.html?search …&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;div class="hilitewrapper"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;                                                        | request ----------------------------------------------- |
+                                                        | path ------------------- |                              |
+        | authorization | | domain -------------- |     | directory ---- || file - | | query ---------------- |   |
+        |               | |                       |     |                ||        | |                        |   |
+
+https://username:password@www.subdomain.example.com:1234/folder/subfolder/index.html?search=products&amp;amp;sort=false#top
+
+|       |        |        |   |         |       |   |   |       |         |     |    |      |        |    |     |
+|       username |        |   |         |       |   |   folder  folder    |     |    |      value    |    value |
+protocol         password |   |         |       |   port                  |     |    parameter       parameter  |
+                          |   |         |       1st-level-domain          |     file-extension                  fragment
+                          |   |         2nd-level-domain                  filename
+                          |   3rd-level-domain
+                          4th-level-domain
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="url"></category></entry><entry><title>zlib Compression Library</title><link href="https://www.devotg.com/2018/zlib-compression-library.html" rel="alternate"></link><published>2018-04-19T10:00:00+09:00</published><updated>2018-04-19T10:00:00+09:00</updated><author><name>chinium</name></author><id>tag:www.devotg.com,2018-04-19:/2018/zlib-compression-library.html</id><summary type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="zlib"&gt;zlib&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;일반적인 용도로 법적 제약 없이 자유롭게 사용가능한 무손실 데이터 압축 라이브러리&lt;/li&gt;
 &lt;li&gt;Jean-loup Gailly (compression)와 Mark Adler (decompression)에 …&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;</summary><content type="html">&lt;/head&gt;&lt;body&gt;&lt;h3 id="zlib"&gt;zlib&lt;/h3&gt;
